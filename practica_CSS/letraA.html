@@ -26,6 +26,8 @@
             border-radius: 5px;
             color: rgb(236, 78, 32);
             text-decoration: none;
+            font-family: Verdana, sans-serif;
+            font-weight: bold;
         }
 
         nav {
@@ -34,9 +36,38 @@
             vertical-align: middle;
         }
 
-        .ilustracion {
-            float: right;
+        .termino {
             display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            padding-left: 3%;
+        }
+
+        .titulo-term {
+            color: rgb(29, 31, 114);
+            font-weight: bold;
+            width: 100%;
+            font-size: larger;
+        }
+
+        .definicion {
+            flex: 1;
+            margin-top: 10px;
+            line-height: 1.5;
+            text-align: justify;
+            font-style: italic;
+            background-color: rgb(239, 248, 250);
+        }
+
+        .ilustracion {
+            flex: 1;
+            text-align: center;
+        }
+
+        .ilustracion img {
+            max-width: 200px;
+            max-height: 200px;
+            border: 3px black solid;
         }
 
         .palabra {
@@ -44,8 +75,8 @@
             font-weight: bold;
         }
 
-        .definicion {
-            font-style: italic;
+        #introduccion {
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -57,32 +88,81 @@
         <a href="LetraB.html">B</a> |
         <a href="LetraC.html">C</a> |
         <a href="LetraD.html">D</a> |
-        <a href="LetraH.html">H</a> |
+        <a href="LetraH.html">H</a> |
     </nav>
 </head>
 
 <body>
-    <h1>LETRA A</h1>
-    <p>En esta página encontraremos algunas de las palabras más comunes que comienzan con la letra A</p>
+    <h1>LETRA: A</h1>
+    <p id="introduccion">En esta página encontraremos algunas de las palabras más comunes que comienzan con la letra A
+    </p>
 
-    <ol>
-        <li style="display: flex;">
-            <p class="palabra">Abeja</p>
-            <p class="definicion">Insecto himenóptero, de unos quince milímetros de largo, de color pardo negruzco y
-                vello rojizo, que vive
-                en colonias y produce cera y miel.</p>
-            <img class="ilustracion" src="imagen.jpg" alt="FOTO 1">
-        </li>
+    <!-- definicion 1 -->
+    <div>
+        <div class="termino">
+            <div class="titulo-term">Abeja</div>
+            <div class="definicion">
+                Insecto himenóptero, de unos quince milímetros de largo, de color pardo negruzco y vello rojizo, que
+                vive en colonias y produce cera y miel.
+            </div>
+            <div class="ilustracion">
+                <img src="imagen.jpg" alt="Ilustración término 1" />
+            </div>
+        </div>
+    </div>
 
-        <li>
-            <h2>Árbol:</h2>
-            <p>Planta de tallo leñoso y elevado, que se ramifica a cierta altura del suelo.</p>
-            <img class="ilustracion" src="imagen.jpg" alt="FOTO 1">
-        </li>
+    <!-- definicion 2 -->
+    <div>
+        <div class="termino">
+            <div class="titulo-term">Árbol</div>
+            <div class="definicion">
+                Planta de tallo leñoso y elevado, que se ramifica a cierta altura del suelo.
+            </div>
+            <div class="ilustracion">
+                <img src="imagen.jpg" alt="Ilustración término 1" />
+            </div>
+        </div>
 
-    </ol>
+        <!-- definicion 3 -->
+        <div>
+            <div class="termino">
+                <div class="titulo-term">Arco</div>
+                <div class="definicion">
+                    Arma para disparar flechas, compuesta por una vara de acero, madera u otra materia elástica, sujeta
+                    por los extremos con una cuerda que la curva al tensarse.
+                </div>
+                <div class="ilustracion">
+                    <img src="imagen.jpg" alt="Ilustración término 1" />
+                </div>
+            </div>
 
-    <center><a href="home.html;">Regresar</a></center>
+            <!-- definicion 4 -->
+            <div>
+                <div class="termino">
+                    <div class="titulo-term">Armadillo</div>
+                    <div class="definicion">
+                        Mamífero americano del orden de los desdentados, con algunos dientes laterales, con un cuerpo de
+                        30 a 50 cm de longitud protegido por un caparazón formado de placas óseas cubiertas por escamas
+                        córneas movibles, de modo que el animal puede enrollarse sobre sí mismo.
+                    </div>
+                    <div class="ilustracion">
+                        <img src="imagen.jpg" alt="Ilustración término 1" />
+                    </div>
+                </div>
+
+                <!-- definicion 5 -->
+                <div>
+                    <div class="termino">
+                        <div class="titulo-term">Artritis</div>
+                        <div class="definicion">
+                            Inflamación de las articulaciones.
+                        </div>
+                        <div class="ilustracion">
+                            <img src="imagen.jpg" alt="Ilustración término 1" />
+                        </div>
+                    </div>
+
+                    <center><a href="home.html;">Regresar</a></center>
 </body>
 
 </html>
