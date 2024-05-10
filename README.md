@@ -3,6 +3,6 @@
 Estamos aprendiendo a git! jaja commit
 
 Miembros:
-Rafaela Black
-Arantxa Coronado
-Pedro Lucero
+- Rafaela Black
+- Arantxa Coronado
+- Pedro Lucero
