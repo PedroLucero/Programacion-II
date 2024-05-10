@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letra A</title>
+    <title>Letra: A</title>
 
     <style>
         body {
@@ -40,34 +40,40 @@
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 30px;
-            padding-left: 3%;
+            margin-left: 20px;
+            /* padding-left: 3%; */
+            padding: 30px;
+            background-color: rgb(239, 248, 250);
+            width: 1100px;
+            border-radius: 15px;
         }
 
         .titulo-term {
             color: rgb(29, 31, 114);
             font-weight: bold;
             width: 100%;
-            font-size: larger;
+            font-size: x-large;
+            font-style: italic;
         }
 
         .definicion {
-            flex: 1;
+            flex: 7;
             margin-top: 10px;
             line-height: 1.5;
             text-align: justify;
             font-style: italic;
-            background-color: rgb(239, 248, 250);
         }
 
         .ilustracion {
-            flex: 1;
-            text-align: center;
+            flex: auto;
+            text-align: right;
         }
 
         .ilustracion img {
             max-width: 200px;
             max-height: 200px;
             border: 3px black solid;
+            border-radius: 10px;
         }
 
         .palabra {
@@ -77,11 +83,14 @@
 
         #introduccion {
             padding-bottom: 20px;
+            font-size: large;
         }
     </style>
 </head>
 
 <head>
+
+    <!-- Barra de navegacion entre paginas del diccionario -->
     <nav>
         <a href="main.html">Inicio</a> |
         <a href="LetraA.html">A</a> |
@@ -93,20 +102,29 @@
 </head>
 
 <body>
+    <!-- Titulo de la pagina -->
     <h1>LETRA: A</h1>
+
+    <!-- Introduccion de la pagina -->
     <p id="introduccion">En esta página encontraremos algunas de las palabras más comunes que comienzan con la letra A
     </p>
 
     <!-- definicion 1 -->
     <div>
         <div class="termino">
-            <div class="titulo-term">Abeja</div>
+
+            <!-- Titulo de la palabra -->
+            <div class="titulo-term">Abeja:</div>
+
+            <!-- Definicion de la palabra -->
             <div class="definicion">
                 Insecto himenóptero, de unos quince milímetros de largo, de color pardo negruzco y vello rojizo, que
                 vive en colonias y produce cera y miel.
             </div>
+
+            <!-- Imagen ilustrativa -->
             <div class="ilustracion">
-                <img src="imagen.jpg" alt="Ilustración término 1" />
+                <img src="abeja.jpg" alt="Ilustración término 1" />
             </div>
         </div>
     </div>
@@ -114,55 +132,80 @@
     <!-- definicion 2 -->
     <div>
         <div class="termino">
-            <div class="titulo-term">Árbol</div>
+
+            <!-- Titulo de la palabra -->
+            <div class="titulo-term">Árbol:</div>
+
+            <!-- Definicion de la palabra -->
             <div class="definicion">
                 Planta de tallo leñoso y elevado, que se ramifica a cierta altura del suelo.
             </div>
+
+            <!-- Imagen ilustrativa -->
             <div class="ilustracion">
-                <img src="imagen.jpg" alt="Ilustración término 1" />
+                <img src="arbol.jpg" alt="Ilustración término 2" />
             </div>
         </div>
 
         <!-- definicion 3 -->
         <div>
             <div class="termino">
-                <div class="titulo-term">Arco</div>
+
+                <!-- Titulo de la palabra -->
+                <div class="titulo-term">Arco:</div>
+
+                <!-- Definicion de la palabra -->
                 <div class="definicion">
                     Arma para disparar flechas, compuesta por una vara de acero, madera u otra materia elástica, sujeta
                     por los extremos con una cuerda que la curva al tensarse.
                 </div>
+
+                <!-- Imagen ilustrativa -->
                 <div class="ilustracion">
-                    <img src="imagen.jpg" alt="Ilustración término 1" />
+                    <img src="arco.jpg" alt="Ilustración término 3" />
                 </div>
             </div>
 
             <!-- definicion 4 -->
             <div>
                 <div class="termino">
-                    <div class="titulo-term">Armadillo</div>
+
+                    <!-- Titulo de la palabra -->
+                    <div class="titulo-term">Armadillo:</div>
+
+                    <!-- Definicion de la palabra -->
                     <div class="definicion">
                         Mamífero americano del orden de los desdentados, con algunos dientes laterales, con un cuerpo de
                         30 a 50 cm de longitud protegido por un caparazón formado de placas óseas cubiertas por escamas
                         córneas movibles, de modo que el animal puede enrollarse sobre sí mismo.
                     </div>
+
+                    <!-- Imagen ilustrativa -->
                     <div class="ilustracion">
-                        <img src="imagen.jpg" alt="Ilustración término 1" />
+                        <img src="armadillo.jpg" alt="Ilustración término 4" />
                     </div>
                 </div>
 
                 <!-- definicion 5 -->
                 <div>
                     <div class="termino">
-                        <div class="titulo-term">Artritis</div>
+
+                        <!-- Titulo de la palabra -->
+                        <div class="titulo-term">Artritis:</div>
+
+                        <!-- Definicion de la palabra -->
                         <div class="definicion">
                             Inflamación de las articulaciones.
                         </div>
+
+                        <!-- Imagen ilustrativa -->
                         <div class="ilustracion">
-                            <img src="imagen.jpg" alt="Ilustración término 1" />
+                            <img src="artritis.jpg" alt="Ilustración término 5" />
                         </div>
                     </div>
 
                     <center><a href="home.html;">Regresar</a></center>
+                    <br>
 </body>
 
 </html>
