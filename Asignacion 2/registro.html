@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+</head>
+
+<body
+    style="background-color: rgb(203, 240, 253); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    <center>
+        <header>
+            <h1>Formulario de Registro</h1>
+        </header>
+
+        <section
+            style="border: 3px solid rgba(224, 255, 255, 0.748); border-radius: 22px; background-color: lightcyan; padding: 40px; width: fit-content; height: fit-content; margin: 40px; margin-left: 35px; align-self: center; text-align: left; padding-inline: 250px;">
+            <p>Bienvenido al formulario de registro para nuestro restaurante:</p>
+            <form>
+                <div style="display: flex; ">
+                    <label style="margin-right: 5px;" for="nombre">Nombre:</label>
+                    <input style="display: block; width: 100%;" type="text" id="nombre" name="nombre" required>
+                </div><br>
+
+                <div style="display: flex;">
+                    <label style="margin-right: 5px;" for="apellido">Apellido:</label>
+                    <input style="display: block; width: 100%;" type="text" id="apellido" name="apellido" required>
+                </div><br>
+
+                <label for="sexo">Sexo:</label>
+                <input type="radio" id="masculino" name="sexo" value="M">
+                <label for="masculino">M</label>
+                <input type="radio" id="femenino" name="sexo" value="F">
+                <label for="femenino">F</label><br><br>
+
+                <div style="display: flex;">
+                    <label style="margin-right: 5px;" for="direccion">Dirección:</label>
+                    <input style="display: block; width: 100%;" type="text" id="direccion" name="direccion" required>
+                </div>
+                <br>
+
+                <div style="display: flex;">
+                    <label style="margin-right: 5px;" for="usuario">Nombre de usuario:</label>
+                    <input style="display: block; width: 65%;" type="text" id="usuario" name="usuario" required>
+                </div><br>
+
+                <div style="display: flex;">
+                    <label for="contrasena">Contraseña de inicio:</label>
+                    <input style="display: block; width: 64%;" type="password" id="contrasena" name="contrasena"
+                        required>
+                </div><br>
+
+                <label for="reserva">Seleccione su reserva:</label>
+                <select id="reserva" name="reserva">
+                    <option value="desayuno">Desayuno</option>
+                    <option value="almuerzo">Almuerzo</option>
+                    <option value="cena">Cena</option>
+                </select><br><br><br>
+                <center>
+                    <input type="submit" value="Enviar">
+                </center>
+            </form>
+        </section>
+
+        <footer>
+            <a href="HOME.html">
+                <h4
+                    style="border: 3px solid rgba(224, 255, 255, 0.748); border-radius: 15px; background-color: lightcyan; padding: 15px; width: fit-content; height: fit-content; margin: 20px; align-self: center;">
+                    REGRESAR</h4>
+            </a>
+        </footer>
+    </center>
+</body>
+
+</html>
