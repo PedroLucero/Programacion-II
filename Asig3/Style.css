@@ -1,0 +1,17 @@
+/* CSS HEX */
+:root {
+    --baby-powder: #fffffaff;
+    --davys-gray: #5b5b5dff;
+    --periwinkle: #c2d6ffff;
+    --jet: #333138ff;
+    --vermilion: #ff312eff;
+}
+
+
+body {
+    background-color: #C2D6FF;
+}
+
+h1 {
+    color: #333138;
+}
