@@ -64,27 +64,27 @@ nav ul li a {
     padding: 10px;
     box-sizing: border-box;
     overflow: auto;
-    /* Clearfix to contain floated elements */
+    /* Contenedor que doma la imagen flotante */
 }
 
 .news-item img {
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
-    /* Add bottom margin to separate image from text */
+    /* el bottom margin separa la imagen del texto */
     size: 20%;
 }
 
 .news-item h2 {
     margin-top: 0;
-    /* Remove default margin for h2 */
+    /* quita margen de h2 */
 }
 
 .news-item p {
     margin-top: 0;
-    /* Remove default margin for p */
+    /* quita margen de p */
     overflow-wrap: break-word;
-    /* Ensure long words break correctly */
+    /* palabras largas se acomdan */
 }
 
 .footer-nav {
