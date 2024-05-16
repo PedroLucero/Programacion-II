@@ -80,10 +80,13 @@ iframe {
 
 .news-item img {
     float: left;
-    margin-right: 10px;
+    margin-right: 25px;
     margin-bottom: 10px;
     /* el bottom margin separa la imagen del texto */
     size: 20%;
+    max-width: 20%;
+    height: auto;
+    border-radius: 2px;
 }
 
 .news-item h2 {
