@@ -1,133 +1,164 @@
 /* CSS HEX */
 :root {
-    /* variables locales de colores */
-    --baby-powder: #fffffaff;
-    --davys-gray: #5b5b5dff;
-    --periwinkle: #c2d6ffff;
-    --jet: #333138ff;
-    --vermilion: #ff312eff;
+  /* variables locales de colores */
+  --baby-powder: #fffffaff;
+  --davys-gray: #5b5b5dff;
+  --periwinkle: #c2d6ffff;
+  --jet: #333138ff;
+  --vermilion: #ff312eff;
 }
 
 body {
-    font-family: Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--baby-powder);
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--baby-powder);
 }
 
 .banner {
-    position: relative;
-    width: 100%;
-    font-size: 0px;
+  position: relative;
+  width: 100%;
+  font-size: 0px;
 }
 
-
 .banner-image {
-    width: 100%;
+  width: 100%;
 }
 
 nav {
-    background-color: var(--periwinkle);
-    color: #fff;
-    text-align: center;
-    padding: 1%;
+  background-color: var(--periwinkle);
+  color: #fff;
+  text-align: center;
+  padding: 1%;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 iframe {
-    width: 55vw;
-    height: 28vw;
-    margin: 0 auto;
-    /* background-color: #777; */
-    border-width: 0px;
-    display: block;
-    margin-bottom: 10px;
+  width: 55vw;
+  height: 28vw;
+  margin: 0 auto;
+  /* background-color: #777; */
+  border-width: 0px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .news {
-    width: 80%;
-    margin: auto;
-    margin-top: 3%;
-    display: flex;
-    flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-item {
-    width: 100%;
-    margin-bottom: 20px;
-    border-top: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: auto;
-    /* Contenedor que doma la imagen flotante */
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  /* Contenedor que doma la imagen flotante */
 }
 
 .news-item img {
-    float: left;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    /* el bottom margin separa la imagen del texto */
-    size: 20%;
-    max-width: 20%;
-    height: auto;
-    border-radius: 2px;
+  float: left;
+  margin-right: 25px;
+  margin-bottom: 10px;
+  /* el bottom margin separa la imagen del texto */
+  size: 20%;
+  max-width: 20%;
+  height: auto;
+  border-radius: 2px;
 }
 
 .news-item h2 {
-    margin-top: 0;
-    /* quita margen de h2 */
+  margin-top: 0;
+  /* quita margen de h2 */
 }
 
 .news-item p {
-    margin-top: 0;
-    /* quita margen de p */
-    overflow-wrap: break-word;
-    /* palabras largas se acomodan */
-    text-align: justify;
+  margin-top: 0;
+  /* quita margen de p */
+  overflow-wrap: break-word;
+  /* palabras largas se acomodan */
+  text-align: justify;
 }
 
 .footer-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    float: left;
-    height: inherit;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  float: left;
+  height: inherit;
 }
 
 .footer-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-nav ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-banner {
-    background-color: red;
-    width: 100%;
-    display: inline-block;
+  background-color: var(--vermilion);
+  width: 100%;
+  display: inline-block;
 }
 
 .footer-nav ul li a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* estilos de contactenos */
+.autores {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around; /* Espacio uniforme entre autores */
+}
+
+.autor {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.autor img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.autor img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.autor h2 {
+  margin-top: 10px; /* espacio entre imagen y nombre */
+  font-weight: bold;
 }
