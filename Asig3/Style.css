@@ -1,5 +1,6 @@
 /* CSS HEX */
 :root {
+    /* variables locales de colores */
     --baby-powder: #fffffaff;
     --davys-gray: #5b5b5dff;
     --periwinkle: #c2d6ffff;
@@ -85,6 +86,7 @@ nav ul li a {
     /* quita margen de p */
     overflow-wrap: break-word;
     /* palabras largas se acomodan */
+    text-align: justify;
 }
 
 .footer-nav {
