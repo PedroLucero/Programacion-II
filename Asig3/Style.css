@@ -50,6 +50,16 @@ nav ul li a {
     padding: 10px 20px;
 }
 
+iframe {
+    width: 55vw;
+    height: 28vw;
+    margin: 0 auto;
+    /* background-color: #777; */
+    border-width: 0px;
+    display: block;
+    margin-bottom: 10px;
+}
+
 .news {
     width: 80%;
     margin: auto;
