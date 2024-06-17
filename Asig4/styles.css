@@ -107,7 +107,7 @@ main {
 }
 
 .main-secundario {
-    ppadding: 20px;
+    padding: 20px;
     background-color: var(--powder-blue);
     margin: 20px;
     margin-left: 0;
