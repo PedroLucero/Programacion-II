@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidad del Pueblo - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <img src="logo.png" alt="Logo Universidad del Pueblo">
-        <div class="banner">Bienvenidos a la Universidad del Pueblo</div>
+        <div class="banner">BIENVENIDOS A LA UNIVERSIDAD DEL PUEBLO</div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="registro_profesores.html">Registro de Profesores</a></li>
-            <li><a href="registro_estudiantes.html">Registro de Estudiantes</a></li>
-            <li><a href="calendario.html">Calendario</a></li>
-            <li><a href="soporte.html">Soporte</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <div class="image-link">
-                <a href="registro_profesores.html"><img src="registro_profesores.jpg" alt="Registro de Profesores"></a>
-            </div>
-            <div class="image-link">
-                <a href="calendario.html"><img src="calendario.jpg" alt="Calendario"></a>
-            </div>
-            <div class="image-link">
-                <a href="registro_estudiantes.html"><img src="registro_estudiantes.jpg" alt="Registro de Estudiantes"></a>
-            </div>
-        </section>
-        <section class="news">
-            <article>
-                <h2>Noticia 1</h2>
-                <p>Descripción de la noticia 1 con un <a href="#">enlace</a>.</p>
-            </article>
-            <article>
-                <h2>Noticia 2</h2>
-                <p>Descripción de la noticia 2 con un <a href="#">enlace</a>.</p>
-            </article>
-            <article>
-                <h2>Noticia 3</h2>
-                <p>Descripción de la noticia 3 con un <a href="#">enlace</a>.</p>
-            </article>
-        </section>
-    </main>
+    <div class="content">
+        <aside>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="registro_profesores.html">Registro de Profesores</a></li>
+                    <li><a href="registro_estudiantes.html">Registro de Estudiantes</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-secundario" id="cuerpo">
+            <section class="image-container">
+                <div class="image-link">
+                    <a href="registro_profesores.html"><img src="RegistroProfesores.png"
+                            alt="Registro de Profesores"></a>
+                </div>
+                <div class="image-link">
+                    <a href="calendario.html"><img src="Calendario.png" alt="Calendario"></a>
+                </div>
+                <div class="image-link">
+                    <a href="registro_estudiantes.html"><img src="RegistroEstudiantes.png"
+                            alt="Registro de Estudiantes"></a>
+                </div>
+            </section>
+            <section class="news">
+                <article>
+                    <h2>Rector de la UTP participó de la Conferencia Final del Proyecto TETRIS</h2>
+                    <p>El Rector de la UTP, Dr. Omar Aizpurúa, participó de la Conferencia Final del Proyecto Technology
+                        Transfer Innovation Schemes (TETRIS), que es financiado por la Comisión Europea mediante el
+                        Programa Erasmus+ y en esta universidad es coordinado por la Dirección de Gestión de
+                        Transferencia del Conocimiento (DGTC). Más de esta noticia <a class="enlace-noticia"
+                            href="https://utp.ac.pa/rector-de-la-utp-participo-de-la-conferencia-final-del-proyecto-tetris">aquí</a>.
+                    </p>
+                </article>
+                <article>
+                    <h2>La UBA escaló 24 posiciones</h2>
+                    <p>La Universidad de Buenos Aires se posicionó en el puesto 71 mundial, según el prestigioso ranking
+                        de la consultora británica Quacquarelli Symonds. Además, por su desempeño en importantes áreas
+                        como reputación académica y resultados de empleabilidad obtenidos por sus graduados, se
+                        encuentra entre las mejores 50. Se afirma así como la mejor universidad del país y de
+                        Iberoamérica. Más de esta noticia <a class="enlace-noticia"
+                            href="https://www.uba.ar/ubanoticias/noticias/334">aquí</a>.</p>
+                </article>
+                <article>
+                    <h2>Fuvest divulga datas das provas do vestibular para ingresso na USP em 2025</h2>
+                    <p>Quem pretende concorrer a uma vaga nos cursos de graduação da USP em 2025 já pode se programar
+                        com as datas do vestibular organizado pela Fundação Universitária para o Vestibular (Fuvest). A
+                        primeira fase será no dia 17 de novembro e a segunda fase, nos dias 15 e 16 de dezembro de 2024.
+                        O calendário completo ainda será divulgado pela instituição. Más de esta noticia <a
+                            class="enlace-noticia"
+                            href="https://jornal.usp.br/universidade/fuvest-divulga-datas-das-provas-do-vestibular-para-ingresso-na-usp-em-2025/">aquí</a>.
+                    </p>
+                </article>
+            </section>
+        </main>
+    </div>
     <footer>
         <ul>
             <li><a href="home.html">Home</a></li>
@@ -58,4 +82,5 @@
         <p>© 2024 Universidad del Pueblo</p>
     </footer>
 </body>
+
 </html>

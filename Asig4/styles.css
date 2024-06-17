@@ -2,13 +2,14 @@
 :root {
     --cornell-red: #b3001bff;
     --eerie-black: #262626ff;
-    --lapis-lazuli: #255c99ff;
+    --lapis-lazuli: #255c99;
     --vista-blue: #7ea3ccff;
     --tan: #ccad8fff;
     --soldadura-color: #b3001b;
     --electronica-color: #255c99;
     --cocina-color: #7ea3cc;
     --programacion-color: #ccad8f;
+    --powder-blue: #ADCBEB;
 }
 
 body {
@@ -17,6 +18,8 @@ body {
     color: var(--eerie-black);
     margin: 0;
     padding: 0;
+    /* nuevo */
+    /* display: flex; */
 }
 
 header {
@@ -24,12 +27,14 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 header img {
-    max-width: 100px;
+    max-width: 120px;
     display: block;
     margin: 0 auto;
+    border-radius: 60px;
 }
 
 header .banner {
@@ -37,17 +42,51 @@ header .banner {
     margin-top: 10px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    background-color: var(--eerie-black);
+aside {
+    display: flex;
 }
 
-nav ul li {
+/* nuevo */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--eerie-black);
+    height: 100%;
+    box-shadow: 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar li {
+    text-align: center;
+    font-size: large;
+    /* border-bottom: 1px solid #555; */
+    padding: 10px;
+}
+
+.content {
+    display: inline-flex;
+    /* margin: 20px;
+    margin-left: 0; */
+}
+
+#cuerpo {
+    display: block;
+}
+
+/* fin nuevo */
+
+nav ul {
+    list-style-type: none;
+    padding: 30px;
+    text-align: center;
+    /* background-color: var(--eerie-black); */
+}
+
+/* nav ul li {
     display: inline;
     margin: 0 15px;
-}
+} */
 
 nav ul li a {
     color: white;
@@ -61,10 +100,23 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    background-color: white;
+    background-color: var(--powder-blue);
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-secundario {
+    ppadding: 20px;
+    background-color: var(--powder-blue);
+    margin: 20px;
+    margin-left: 0;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* nuevo */
+    display: flex;
 }
 
 section h2 {
@@ -73,7 +125,10 @@ section h2 {
     padding-bottom: 10px;
 }
 
-section p, section form, section table, section .integrante {
+section p,
+section form,
+section table,
+section .integrante {
     margin: 20px 0;
 }
 
@@ -91,6 +146,33 @@ section form select.input-field {
     border-radius: 5px;
     display: inline-block;
     box-sizing: border-box;
+}
+
+/* Clases de la pagina de home */
+
+.enlace-noticia {
+    color: var(--lapis-lazuli);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-link {
+    flex: 1;
+    padding: 5px;
+    margin: 5px;
+    /* background-color: lightgray; */
+    text-align: center;
+}
+
+.image-link img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 7px;
+    border: 1px solid black;
 }
 
 .radio-group {
@@ -154,10 +236,12 @@ table {
     border-collapse: collapse;
 }
 
-table th, table td {
+table th,
+table td {
     border: 1px solid var(--eerie-black);
     padding: 10px;
     text-align: center;
+    background-color: var(--tan);
 }
 
 table th {
@@ -208,7 +292,7 @@ table td:hover {
     font-size: 0.9em;
 }
 
-.calendar .soldadura .materia {
+/* .calendar .soldadura .materia {
     color: var(--soldadura-color);
 }
 
@@ -222,7 +306,7 @@ table td:hover {
 
 .calendar .programacion .materia {
     color: var(--programacion-color);
-}
+} */
 
 .empty {
     background-color: #f4f4f4;
