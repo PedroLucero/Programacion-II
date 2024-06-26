@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0b7b1ff;
+}
+
+/* --------------------------------------------------------------HEADER---------------------------------------------------------------------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #037971ff;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Estilos para la imagen */
+.logo {
+    width: 7%;
+    height: auto;
+}
+
+/* Estilos para los iconos */
+.iconos {
+    display: flex;
+    gap: 10px;
+}
+
+
+.icono img{
+    width: 30px;
+    height: auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
+nav {
+    background-color: #023436ff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 80%;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------BANNER-------------------------------------------------------------------------------------- */
+.banner{
+    background: url('furniture.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #c0b7b1ff;
+}
+
+.banner h2 {
+    font-size: 3em;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------LOGIN LINKS-------------------------------------------------------------------------------------- */
+.login {
+    background-color: #665687ff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container_login {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.links {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #f79256ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.links:hover {
+    background-color: #C25E24;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+.products {
+    padding: 50px 20px;
+    background-color: #bbd5edff;
+}
+
+.products .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+/* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
