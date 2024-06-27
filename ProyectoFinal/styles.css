@@ -1,3 +1,15 @@
+:root {
+    --verde-claro: #037971ff;
+    --verde-oscuro: #023436ff;
+    --crema: #c0b7b1ff;
+    /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
+    --violeta-claro: #665687ff;
+    --violeta-oscuro: #5d4e6dff;
+    --naranja: #f79256ff;
+    --celeste: #bbd5edff;
+    --yellow-green: #9acd32ff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +22,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #037971ff;
+    background-color: var(--verde-claro);
     color: #fff;
     padding-left: 10px;
     padding-right: 10px;
@@ -38,7 +50,7 @@ header {
 
 /* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
 nav {
-    background-color: #023436ff;
+    background-color: var(--verde-oscuro);
 }
 
 nav ul {
@@ -69,7 +81,7 @@ nav ul li a {
     color: black;
     text-align: center;
     padding: 100px 20px;
-    background-color: #c0b7b1ff;
+    background-color: var(--crema);
 }
 
 .banner h2 {
@@ -80,7 +92,7 @@ nav ul li a {
 
 /* ---------------------------------------------------LOGIN LINKS-------------------------------------------------------------------------------------- */
 .login {
-    background-color: #665687ff;
+    background-color: var(--violeta-claro);
     padding: 10px;
     text-align: center;
 }
@@ -94,7 +106,7 @@ nav ul li a {
     display: inline-block;
     margin: 0 10px;
     padding: 5px 10px;
-    background-color: #f79256ff;
+    background-color: var(--naranja);
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -109,7 +121,7 @@ nav ul li a {
 
 .products {
     padding: 50px 20px;
-    background-color: #bbd5edff;
+    background-color: var(--celeste);
 }
 
 .products .container {
@@ -145,12 +157,70 @@ nav ul li a {
     margin: 10px 0;
 }
 
+/*-------------------------------------FORMULARIOS---------------------------------------------*/
+.FORMULARIOS {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Asegura que los formularios tengan la misma altura */
+    width: 80%;
+    max-width: 1000px;
+    margin: 1% auto;
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(216, 121, 66);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
 /* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 footer p {
