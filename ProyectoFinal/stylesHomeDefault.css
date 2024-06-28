@@ -41,7 +41,7 @@ header {
 }
 
 
-.icono img{
+.icono img {
     width: 30px;
     height: auto;
 }
@@ -76,7 +76,7 @@ nav ul li a {
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ---------------------------------------------------BANNER-------------------------------------------------------------------------------------- */
-.banner{
+.banner {
     background: url('furniture.jpg') no-repeat center center/cover;
     color: black;
     text-align: center;
@@ -115,6 +115,7 @@ nav ul li a {
 .links:hover {
     background-color: #C25E24;
 }
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -157,11 +158,23 @@ nav ul li a {
     margin: 10px 0;
 }
 
+.boton-noticia {
+    padding: 7px;
+    background-color: var(--naranja);
+    /* margin-top: 2px; */
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 4px;
+
+}
+
 /*-------------------------------------FORMULARIOS---------------------------------------------*/
 .FORMULARIOS {
     display: flex;
     justify-content: space-around;
-    align-items: stretch; /* Asegura que los formularios tengan la misma altura */
+    align-items: stretch;
+    /* Asegura que los formularios tengan la misma altura */
     width: 80%;
     max-width: 1000px;
     margin: 1% auto;
@@ -226,4 +239,5 @@ footer {
 footer p {
     margin: 0;
 }
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
