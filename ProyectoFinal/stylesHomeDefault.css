@@ -1,7 +1,7 @@
 :root {
     --verde-claro: #037971ff;
     --verde-oscuro: #023436ff;
-    --crema: #c0b7b1ff;
+    --crema: rgb(205, 205, 205);
     /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
     --violeta-claro: #665687ff;
     --violeta-oscuro: #5d4e6dff;
@@ -37,7 +37,7 @@ header {
 /* Estilos para los iconos */
 .iconos {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 
@@ -53,7 +53,7 @@ nav {
     background-color: var(--verde-oscuro);
 }
 
-nav ul {
+.nav-ul-superior {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,12 +65,20 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.menu-superior {
     color: #ffffff;
     font-size: 80%;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
+    font-weight: 500;
+}
+
+.menu-superior:hover {
+    /* color: var(--naranja); */
+    background-color: var(--naranja);
+    color: black;
+    font-weight: 525;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -80,12 +88,18 @@ nav ul li a {
     background: url('furniture.jpg') no-repeat center center/cover;
     color: black;
     text-align: center;
-    padding: 100px 20px;
-    background-color: var(--crema);
+    padding: 3%;
+    background-color: var(--celeste);
 }
 
 .banner h2 {
-    font-size: 3em;
+    font-size: xx-large;
+}
+
+#slogan {
+    font-style: italic;
+    font-weight: 600;
+    font-size: medium;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -120,27 +134,27 @@ nav ul li a {
 
 
 
-.products {
+.news {
     padding: 50px 20px;
-    background-color: var(--celeste);
+    background-color: var(--crema);
 }
 
-.products .container {
+.news .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.products h2 {
+.news h2 {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.product-list {
+.news-list {
     display: flex;
     justify-content: space-between;
 }
 
-.product-item {
+.news-item {
     background: white;
     padding: 20px;
     border: 1px solid #ddd;
@@ -149,28 +163,31 @@ nav ul li a {
     margin: 0 10px;
 }
 
-.product-item img {
+.news-item img,
+iframe {
     max-width: 100%;
     height: auto;
 }
 
-.product-item h3 {
+#iframe-height {
+    height: 68%;
+}
+
+.news-item h3 {
     margin: 10px 0;
 }
 
 .boton-noticia {
-    padding: 7px;
+    padding: 5px;
     background-color: var(--naranja);
     /* margin-top: 2px; */
     text-decoration: none;
     font-weight: bold;
     color: black;
-    border-radius: 4px;
-
+    border-radius: 2px;
 }
 
-/*-------------------------------------FORMULARIOS---------------------------------------------*/
-.FORMULARIOS {
+-------------------------------------FORMULARIOS---------------------------------------------*/ .FORMULARIOS {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
@@ -238,6 +255,60 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.footer-container {
+    font-size: small;
+    font-style: italic;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------FOOTER NAV-------------------------------------------------------------------------------------- */
+
+.footer-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* float: left; */
+    height: inherit;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul li {
+    /* margin-bottom: 10px; */
+    text-align: center;
+}
+
+.footer-banner {
+    /* background-color: var(--vermilion); */
+    width: 100%;
+    display: inline-block;
+}
+
+
+.menu-inferior {
+    color: #ffffff;
+    font-size: small;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.menu-inferior:hover {
+    /* color: var(--naranja); */
+    /* background-color: var(--naranja); */
+    color: var(--naranja);
+    font-weight: 525;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */

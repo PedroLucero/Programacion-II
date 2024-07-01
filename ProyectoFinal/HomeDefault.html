@@ -11,51 +11,55 @@
 <body>
 
     <header>
-        <img src="LOLO.png" alt="Logo" class="logo">
+        <img src="nb-logow.png" alt="Logo" class="logo">
         <div class="iconos">
-            <a class="icono" href="https://www.google.com"><img src="lupa-masvisible.png"></a>
-            <a class="icono" href="https://www.instagram.com"><img src="instagram.png"></a>
-            <a class="icono" href="https://es-la.facebook.com"><img src="facebook.png"></a>
-            <a class="icono" href="https://web.whatsapp.com"><img src="whatsapp.png"></a>
+            <a class="icono" href="https://www.google.com"><img src="lupa-1.png"></a>
+            <a class="icono" href="https://www.instagram.com"><img src="instagram-1.png"></a>
+            <a class="icono" href="https://www.tiktok.com/discover?lang=es"><img src="tik-tok.png"></a>
+            <a class="icono" href="https://www.pinterest.com"><img src="pinterest.png"></a>
         </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="pagina1.html">HOME</a></li>
-            <li><a href="pagina2.html">CATALOGO</a></li>
-            <li><a href="pagina3.html">CONTACTO</a></li>
+        <ul class="nav-ul-superior">
+            <li><a class="menu-superior" href="HomeDefault.html">HOME</a></li>
+            <li><a class="menu-superior" href="pagina2.html">CATALOGO</a></li>
+            <li><a class="menu-superior" href="pagina3.html">CONTACTO</a></li>
         </ul>
     </nav>
 
     <section id="home" class="banner">
         <div class="container_banner">
-            <h2>Bienvenidos a nuestra tienda de muebles</h2>
-            <p>Encuentra los mejores muebles para tu hogar</p>
+            <h2>Bienvenidos a The Art Of Kitchen</h2>
+            <p id="slogan">"Crafting Culinary Elegance"</p>
         </div>
     </section>
 
 
-    <section id="products" class="products">
+    <section id="news" class="news">
         <div class="container">
             <h2>Noticias Relevantes</h2>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="imagen.jpg" alt="Sofá">
-                    <h3>Ideas que funcionan para decorar cocinas pequeñas</h3>
+            <div class="news-list">
+                <div class="news-item">
+                    <img src="noticia1.jpg" alt="Noticia">
+                    <h3>"Ideas que funcionan para decorar cocinas pequeñas"</h3>
                     <p><a class="boton-noticia"
                             href="https://www.hola.com/decoracion/20230403229339/cocinas-pequenas-mc/">Conoce más
                             aquí</a>
                     </p>
                 </div>
-                <div class="product-item">
-                    <img src="imagen.jpg" alt="Mesa">
-                    <h3>Aqui va la segunda noticia en formato de video</h3>
+                <div class="news-item">
+                    <iframe id="iframe-height" width="560" height="315"
+                        src="https://www.youtube.com/embed/UZQ2mlHG7jo?si=MP-7XZRjiEd3JCtg" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>"Top Kitchen Trends: Kitchen Design Tips & Hacks"</h3>
                     <p><a class="boton-noticia" href="">Conoce más aquí</a></p>
                 </div>
-                <div class="product-item">
-                    <img src="imagen.jpg" alt="Silla">
-                    <h3>Una cocina que armoniza lo rústico y lo moderno</h3>
+                <div class="news-item">
+                    <img src="noticia3.jpg" alt="Noticia">
+                    <h3>"Una cocina que armoniza lo rústico y lo moderno"</h3>
                     <p><a class="boton-noticia"
                             href="https://www.hola.com/decoracion/20240628700915/cocina-estilo-rustico-moderno-en-perfecto-equilibrio-am/">Conoce
                             más aquí</a>
@@ -65,7 +69,7 @@
         </div>
     </section>
 
-    <div class="FORMULARIOS">
+    <!-- <div class="FORMULARIOS">
         <form class="form" id="login-form">
             <h2>Iniciar Sesión</h2>
             <label for="login-username">Username:</label>
@@ -85,13 +89,22 @@
             <input type="password" id="register-password" name="password" required>
             <button type="submit">Registro</button>
         </form>
-    </div>
+    </div> -->
 
 
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 The Art of Kitchen. Todos los derechos reservados. Design in Mouth The Box</p>
+        <div class="footer-banner">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
+                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-container">
+            <p>&copy; 2024 The Art of Kitchen. Todos los derechos reservados. Designed in Mouth The Box</p>
         </div>
     </footer>
 </body>
