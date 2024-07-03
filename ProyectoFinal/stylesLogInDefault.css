@@ -150,7 +150,6 @@ nav ul li a {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    /* Asegura que los formularios tengan la misma altura */
     width: 80%;
     max-width: 1000px;
     margin: 1% auto;
@@ -175,12 +174,15 @@ nav ul li a {
     margin-bottom: 5px;
 }
 
-.form input {
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .form button {
@@ -197,6 +199,17 @@ nav ul li a {
 .form button:hover {
     background-color: var(--verde-claro);
 }
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
 
 /*---------------------------------------------------------------------------------------*/
 
