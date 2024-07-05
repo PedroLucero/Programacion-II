@@ -14,40 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="stylesLogInDefault.css">
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
@@ -121,7 +87,7 @@
             try (InputStream input = new FileInputStream(configPath)) {
                 prop.load(input);
             } catch (Exception e) {
-                errorMessage = "archivo config error: " + e.getMessage();
+                errorMessage = "Archivo config error: " + e.getMessage();
             }
 
             String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";
@@ -154,9 +120,9 @@
                     session.setAttribute("role", role);
 
                     if ("CLIENTE".equalsIgnoreCase(role)) {
-                        response.sendRedirect("homeusuario.jsp");
+                        response.sendRedirect("homecliente.jsp");
                     } else if ("EMPLEADO".equalsIgnoreCase(role)) {
-                        response.sendRedirect("employeeHome.jsp");
+                        response.sendRedirect("maincolaborador.jsp");
                     }
                 } else {
                     // Usuario o contraseña incorrectos
@@ -175,33 +141,11 @@
         }
     %>
 
-    <% if (!success && !errorMessage.isEmpty()) { %>
-    <div id="myModal" class="modal" style="display:block;">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p><%= errorMessage %></p>
-        </div>
+    <% if (!errorMessage.isEmpty()) { %>
+    <div class="error-message">
+        <p><%= errorMessage %></p>
     </div>
     <% } %>
 
-    <script>
-        // Obtener el modal
-        var modal = document.getElementById("myModal");
-
-        // Obtener el <span> que cierra el modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // Cuando el usuario hace click en <span> (x), se cierra el modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // Cuando el usuario hace click fuera del modal, se cierra
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>

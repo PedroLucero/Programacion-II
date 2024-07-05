@@ -1,141 +1,140 @@
 :root {
-    --verde-claro: #037971ff;
-    --verde-oscuro: #023436ff;
-    --crema: rgb(205, 205, 205);
-    /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
-    --violeta-claro: #665687ff;
-    --violeta-oscuro: #5d4e6dff;
-    --naranja: #f79256ff;
-    --celeste: #bbd5edff;
-    --yellow-green: #9acd32ff;
+  --verde-claro: #037971ff;
+  --verde-oscuro: #023436ff;
+  --crema: rgb(205, 205, 205);
+  /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
+  --violeta-claro: #665687ff;
+  --violeta-oscuro: #5d4e6dff;
+  --naranja: #f79256ff;
+  --celeste: #bbd5edff;
+  --yellow-green: #9acd32ff;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #c0b7b1ff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c0b7b1ff;
 }
 
 /* --------------------------------------------------------------HEADER---------------------------------------------------------------------- */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--verde-claro);
-    color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--verde-claro);
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Estilos para la imagen */
 .logo {
-    width: 7%;
-    height: auto;
+  width: 7%;
+  height: auto;
 }
 
 /* Estilos para los iconos */
 .iconos {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
-
 .icono img {
-    width: 30px;
-    height: auto;
+  width: 30px;
+  height: auto;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
 nav {
-    background-color: var(--verde-oscuro);
+  background-color: var(--verde-oscuro);
 }
 
 .nav-ul-superior {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff;
-    font-size: 80%;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
+  color: #ffffff;
+  font-size: 80%;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
 }
 
 .menu-superior {
-    color: #ffffff;
-    font-size: 80%;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    font-weight: 500;
+  color: #ffffff;
+  font-size: 80%;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
 }
 
 .menu-superior:hover {
-    /* color: var(--naranja); */
-    background-color: var(--naranja);
-    color: black;
-    font-weight: 525;
+  /* color: var(--naranja); */
+  background-color: var(--naranja);
+  color: black;
+  font-weight: 525;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ---------------------------------------------------BANNER-------------------------------------------------------------------------------------- */
 .banner {
-    background: url('furniture.jpg') no-repeat center center/cover;
-    color: black;
-    text-align: center;
-    padding: 3%;
-    background-color: #C25E24;
+  background: url("furniture.jpg") no-repeat center center/cover;
+  color: black;
+  text-align: center;
+  padding: 3%;
+  background-color: #c25e24;
 }
 
 .banner h2 {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 
 #slogan {
-    font-style: italic;
-    font-weight: 600;
-    font-size: medium;
+  font-style: italic;
+  font-weight: 600;
+  font-size: medium;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ---------------------------------------------------LOGIN LINKS-------------------------------------------------------------------------------------- */
 .login {
-    background-color: var(--violeta-claro);
-    padding: 10px;
-    text-align: center;
+  background-color: var(--violeta-claro);
+  padding: 10px;
+  text-align: center;
 }
 
 .container_login {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .links {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 5px 10px;
-    background-color: var(--naranja);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: var(--naranja);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .links:hover {
-    background-color: #C25E24;
+  background-color: #c25e24;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -169,72 +168,70 @@ nav ul li a {
 }
 
 .form h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form input[type="text"],
 .form input[type="password"],
 .form input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 #registro-link {
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-    color: black;
-    text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: none;
 }
 
 #registro-link:hover {
-    text-decoration: underline;
-    color: var(--naranja);
+  text-decoration: underline;
+  color: var(--naranja);
 }
 
 .form button {
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(216, 121, 66);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(216, 121, 66);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: auto;
 }
 
 .form button:hover {
-    background-color: var(--verde-claro);
+  background-color: var(--verde-claro);
 }
 
 /*---------------------------------------------------------------------------------------*/
 
-
-
 /* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
 
 .footer-container {
-    font-size: small;
-    font-style: italic;
+  font-size: small;
+  font-style: italic;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -250,11 +247,11 @@ footer p {
 }
 
 .footer-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-nav ul li {
@@ -266,14 +263,13 @@ footer p {
     display: inline-block;
 }
 
-
 .menu-inferior {
-    color: #ffffff;
-    font-size: small;
-    text-decoration: none;
-    padding: 0px 15px;
-    display: block;
-    font-weight: 500;
+  color: #ffffff;
+  font-size: small;
+  text-decoration: none;
+  padding: 0px 15px;
+  display: block;
+  font-weight: 500;
 }
 
 .menu-inferior:hover {
