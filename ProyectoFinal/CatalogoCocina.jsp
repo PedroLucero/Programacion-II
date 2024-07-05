@@ -98,8 +98,8 @@
                     else {
                         out.println("- Esta cocina no está disponible - <br><br>");
                     }
-                    
-                    out.println("<button>Añadir al carrito</button>");
+                    int id = rs.getInt("ID");
+                    out.println("<button><a class='menu-inferior' href='InfoCocina.jsp?id=" + id + "'></a>Ver detalles</button>");
                     out.println("</div></div>");
                 }
             %>
