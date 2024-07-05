@@ -88,13 +88,13 @@
         <nav class="nav-superior">
             <ul class="nav-ul-superior">
                 <li class="opcion">
-                    <a class="menu-superior" href="maincolaborador.jsp">PERFIL DEL COLABORADOR</a>
+                    <a class="menu-superior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a>
                 </li>
                 <li class="opcion">
                     <a class="menu-superior" href="inventario.jsp">INVENTARIO</a>
                 </li>
                 <li class="opcion">
-                    <a class="menu-superior" href="pagina3.html">ENTREGAS</a>
+                    <a class="menu-superior" href="Entregas.html">ENTREGAS</a>
                 </li>
                 <li id="login">
                     <a class="menu-superior" href="LogInDefault.jsp">CERRAR SESION</a>
@@ -144,8 +144,8 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
                 </ul>
             </nav>
