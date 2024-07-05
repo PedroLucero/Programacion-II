@@ -138,31 +138,33 @@ nav ul li a {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
 /*-------------------------------------FORMULARIOS---------------------------------------------*/
 .form-section {
-  padding: 50px 20px;
-  background-color: var(--celeste);
-  position: relative;
-  padding-bottom: 60px;
+    padding: 50px 20px;
+    background-color: var(--celeste);
+    position: relative;
 }
 
 .formularios {
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  width: 80%;
-  max-width: 1000px;
-  margin: 1% auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1% auto;
 }
 
 .form {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background: white;
+    padding: 10%;
+    border-radius: 8px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .form h2 {
@@ -213,23 +215,6 @@ nav ul li a {
   background-color: var(--verde-claro);
 }
 
-#LGTRABAJADOR {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #ffb366; /* Color naranja pálido */
-  color: #000; /* Color del texto */
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-#LGTRABAJADOR:hover {
-  background-color: #ffa340; /* Un tono más oscuro para el efecto hover */
-}
-
 /*---------------------------------------------------------------------------------------*/
 
 /* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
@@ -254,12 +239,11 @@ footer p {
 /* ---------------------------------------------------FOOTER NAV-------------------------------------------------------------------------------------- */
 
 .footer-nav {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  /* float: left; */
-  height: inherit;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: inherit;
 }
 
 .footer-nav ul {
@@ -271,14 +255,12 @@ footer p {
 }
 
 .footer-nav ul li {
-  /* margin-bottom: 10px; */
-  text-align: center;
+    text-align: center;
 }
 
 .footer-banner {
-  /* background-color: var(--vermilion); */
-  width: 100%;
-  display: inline-block;
+    width: 100%;
+    display: inline-block;
 }
 
 .menu-inferior {
@@ -291,10 +273,8 @@ footer p {
 }
 
 .menu-inferior:hover {
-  /* color: var(--naranja); */
-  /* background-color: var(--naranja); */
-  color: var(--naranja);
-  font-weight: 525;
+    color: var(--naranja);
+    font-weight: 525;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */

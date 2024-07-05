@@ -95,7 +95,7 @@ nav {
 /*---------------------------------------------------------INTEGRANTES DEL GRUPO---------------------------------------------------------------------------------------*/
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
@@ -112,7 +112,7 @@ h2 {
 .personas-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:center
 }
 
 .persona-item {
@@ -120,10 +120,15 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
+    margin-right: 20px; /* Espacio entre personas */
     margin-bottom: 20px;
-    width: calc(33% - 20px);
+    width: calc(20% - 20px); /* Una persona por fila */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.persona-item:last-child {
+    margin-right: 0; /* Elimina el espacio derecho del último elemento */
 }
 
 .persona-item:hover {
@@ -145,6 +150,14 @@ p strong {
     color: #333;
 }
 
+/* Estilos para las imágenes */
+.persona-item img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    border-radius: 50%; /* Para imágenes redondas */
+}
 
 /*---------------------------------------------------------------------------------------*/
 
