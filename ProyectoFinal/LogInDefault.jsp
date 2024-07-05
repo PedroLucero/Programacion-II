@@ -65,7 +65,7 @@
         <ul class="nav-ul-superior">
             <li><a class="menu-superior" href="HomeDefault.html">HOME</a></li>
             <li><a class="menu-superior" href="CatalogoMenu.html">CATALOGO</a></li>
-            <li><a class="menu-superior" href="pagina3.html">CONTACTO</a></li>
+            <li><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
         </ul>
     </nav>
 
@@ -88,7 +88,6 @@
                 <button type="submit">Login</button>
             </form>
         </div>
-        <a id="LGTRABAJADOR" href="#">Iniciar sesión como colaborador</a>
     </section>
 
     <footer>
@@ -96,8 +95,8 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
