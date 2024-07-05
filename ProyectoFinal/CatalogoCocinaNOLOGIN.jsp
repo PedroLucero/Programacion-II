@@ -99,7 +99,6 @@
                         out.println("- Esta cocina no está disponible - <br><br>");
                     }
                     
-                    out.println("<button>Añadir al carrito</button>");
                     out.println("</div></div>");
                 }
             %>

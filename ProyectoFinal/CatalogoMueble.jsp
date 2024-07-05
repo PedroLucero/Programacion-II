@@ -116,7 +116,6 @@
                 out.println("Disponibles: " + disponibles + "<br><br>");
                 out.println("Color: " + color + "<br><br>");
                 out.println("Linea: " + linea + "<br><br>");
-                out.println("<button>Añadir al carrito</button>");
                 out.println("</div></div>");
             }
         %>         

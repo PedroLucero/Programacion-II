@@ -124,7 +124,7 @@
                 out.println("DEBUG: Role: " + role);
 
                 if ("CLIENTE".equalsIgnoreCase(role)) {
-                    response.sendRedirect("HomeUsuario.html");
+                    response.sendRedirect("HomeUsuario.jsp");
                 } else if ("EMPLEADO".equalsIgnoreCase(role)) {
                     response.sendRedirect("MainColaborador.jsp");
                 }
