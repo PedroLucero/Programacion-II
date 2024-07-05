@@ -1,5 +1,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.sql.*" %>
+<%@ page import="java.util.Properties"%>
+<%@ page import="java.io.InputStream"%>
+<%@ page import="java.io.FileInputStream"%>
 <%@ page import="oracle.jdbc.driver.OracleDriver" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
@@ -15,10 +18,18 @@
 
 <body>
     <%
+        //cosita para no tener que escribir password y user
+        Properties prop = new Properties();
+        String configPath = application.getRealPath("WEB-INF/config.properties");
+        try (InputStream input = new FileInputStream(configPath)) {
+            prop.load(input);
+        } catch (Exception e) {
+            out.println("archivo config error: " + e.getMessage());
+        }
         // Database connection parameters
         String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";
-        String username = "pedro";
-        String password = "pedro";
+        String username = prop.getProperty("db.username");
+        String password = prop.getProperty("db.password");
 
         Connection conn = null;
         Statement stmt = null;
@@ -34,9 +45,9 @@
             stmt = conn.createStatement();
             stmtcq = conn.createStatement();
             // Execute the query
-            String sql = "SELECT * FROM COCINA";
+            String catalogue_query = "SELECT * FROM COCINA";
             String sales_query = "SELECT * FROM DETALLE_V_COCINAS D JOIN COCINA C ON D.ID_COCINA = C.ID";
-            rs = stmt.executeQuery(sql);
+            rs = stmt.executeQuery(catalogue_query);
             cqrs = stmtcq.executeQuery(sales_query);
 
         } catch (ClassNotFoundException e) {
