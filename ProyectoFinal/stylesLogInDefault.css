@@ -97,7 +97,7 @@ nav ul li a {
     color: black;
     text-align: center;
     padding: 3%;
-    background-color: var(--crema);
+    background-color: #C25E24;
 }
 
 .banner h2 {
@@ -144,6 +144,8 @@ nav ul li a {
 .form-section {
     padding: 50px 20px;
     background-color: var(--celeste);
+    position: relative;
+    padding-bottom: 60px;
 }
 
 .formularios {
@@ -185,6 +187,19 @@ nav ul li a {
     box-sizing: border-box;
 }
 
+#registro-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+#registro-link:hover {
+    text-decoration: underline;
+    color: var(--naranja);
+}
+
 .form button {
     width: 100%;
     padding: 10px;
@@ -200,16 +215,22 @@ nav ul li a {
     background-color: var(--verde-claro);
 }
 
-.radio-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+#LGTRABAJADOR {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #FFB366; /* Color naranja pálido */
+    color: #000; /* Color del texto */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.radio-group input[type="radio"] {
-    margin-right: 10px;
+#LGTRABAJADOR:hover {
+    background-color: #FFA340; /* Un tono más oscuro para el efecto hover */
 }
-
 
 /*---------------------------------------------------------------------------------------*/
 
@@ -239,7 +260,7 @@ footer p {
 .footer-nav {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     /* float: left; */
     height: inherit;
@@ -269,7 +290,7 @@ footer p {
     color: #ffffff;
     font-size: small;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 0px 15px;
     display: block;
     font-weight: 500;
 }
