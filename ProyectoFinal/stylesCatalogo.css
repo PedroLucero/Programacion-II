@@ -162,7 +162,6 @@ nav {
 
 .mueble button {
     align-self: flex-start;
-    padding: 10px 15px;
     background-color: var(--naranja);
     color: white;
     border: none;

@@ -72,7 +72,7 @@
             <li class="opcion"><a class="menu-superior" href="HomeUsuario.html">HOME</a></li>
             <li class="opcion"><a class="menu-superior" href="CatalogoMenu.html">CATALOGO</a></li>
             <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
-            <li id="login"><a class="menu-superior" href="LogInDefault.html">INICIAR SESION</a></li>
+            <li id="login"><a class="menu-superior" href="LogInDefault.jsp">INICIAR SESION</a></li>
         </ul>
     </nav>
 
@@ -99,7 +99,7 @@
                         out.println("- Esta cocina no está disponible - <br><br>");
                     }
                     int id = rs.getInt("ID");
-                    out.println("<button><a class='menu-inferior' href='InfoCocina.jsp?id=" + id + "'></a>Ver detalles</button>");
+                    out.println("<a class='menu-inferior' href='InfoCocina.jsp?id=" + id + "'><button>Ver detalles</button></a>");
                     out.println("</div></div>");
                 }
             %>
