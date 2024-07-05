@@ -1,0 +1,210 @@
+:root {
+    --verde-claro: #037971ff;
+    --verde-oscuro: #023436ff;
+    --crema: rgb(205, 205, 205);
+    /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
+    --violeta-claro: #665687ff;
+    --violeta-oscuro: #5d4e6dff;
+    --naranja: #f79256ff;
+    --celeste: #bbd5edff;
+    --yellow-green: #9acd32ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0b7b1ff;
+}
+
+/* --------------------------------------------------------------HEADER---------------------------------------------------------------------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--verde-claro);
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Estilos para la imagen */
+.logo {
+    width: 7%;
+    height: auto;
+}
+
+/* Estilos para los iconos */
+.iconos {
+    display: flex;
+    gap: 15px;
+}
+
+
+.icono img {
+    width: 30px;
+    height: auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
+nav {
+    background-color: var(--verde-oscuro);
+}
+
+.nav-ul-superior {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 80%;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-superior {
+    color: #ffffff;
+    font-size: 80%;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.menu-superior:hover {
+    /* color: var(--naranja); */
+    background-color: var(--naranja);
+    color: black;
+    font-weight: 525;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------INFO COCINAS-------------------------------------------------------------------------------------- */
+
+.main-title, .secondary-title {
+    text-align: center;
+}
+
+.product-section {
+    display: flex;
+    margin: 20px 0;
+    background-color: red;
+}
+
+.product-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.related-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: green;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-container {
+    font-size: small;
+    font-style: italic;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------FOOTER NAV-------------------------------------------------------------------------------------- */
+
+.footer-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    /* float: left; */
+    height: inherit;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul li {
+    /* margin-bottom: 10px; */
+    text-align: center;
+}
+
+.footer-banner {
+    /* background-color: var(--vermilion); */
+    width: 100%;
+    display: inline-block;
+}
+
+
+.menu-inferior {
+    color: #ffffff;
+    font-size: small;
+    text-decoration: none;
+    padding: 0px 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.menu-inferior:hover {
+    /* color: var(--naranja); */
+    /* background-color: var(--naranja); */
+    color: var(--naranja);
+    font-weight: 525;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
