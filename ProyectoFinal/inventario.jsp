@@ -32,9 +32,12 @@
             <ul class="nav-ul-superior">
                 <li class="opcion"><a class="menu-superior" href="MainColaborador.html">PERFIL DEL COLABORADOR</a></li>
                 <li class="opcion"><a class="menu-superior" href="inventario.jsp">INVENTARIO</a></li>
-                <li class="opcion"><a class="menu-superior" href="pagina3.html">CONTACTO</a></li>
+                <li class="opcion"><a class="menu-superior" href="Entregas.html">ENTREGAS</a></li>
+                <li id="login"><a class="menu-superior" href="LogInDefault.html">CERRAR SESION</a></li>
             </ul>
         </nav>
+
+        <div class="container main-content">
 
         <div class="content">
             <section id="home" class="banner">
@@ -43,6 +46,7 @@
                     <p id="slogan">"Crafting Culinary Elegance"</p>
                 </div>
             </section>
+            
             <h1>Inventario de Muebles</h1>
 
             <h2>Muebles Altos</h2>
@@ -113,11 +117,32 @@
                                     out.println("<td>" + rsAltos.getInt("id_fabricante") + "</td>");
                                     out.println("</tr>");
                                 }
+                        %>
+                    </tbody>
+                </table>
+            </div>
 
+            <h2>Muebles Bajos</h2>
+            <div class="table-container">
+                <table id="tableBajos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cantidad</th>
+                            <th>Color</th>
+                            <th>Línea</th>
+                            <th>Ancho</th>
+                            <th>Alto</th>
+                            <th>Precio</th>
+                            <th>Fecha de Compra</th>
+                            <th>Altura del Suelo</th>
+                            <th>Número de Divisiones</th>
+                            <th>ID del Fabricante</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
                                 // Muebles Bajos
-                                out.println("</tbody></table><h2>Muebles Bajos</h2><div class='table-container'><table id='tableBajos'><thead><tr>");
-                                out.println("<th>ID</th><th>Cantidad</th><th>Color</th><th>Línea</th><th>Ancho</th><th>Alto</th><th>Precio</th><th>Fecha de Compra</th><th>Altura del Suelo</th><th>Número de Divisiones</th><th>ID del Fabricante</th></tr></thead><tbody>");
-
                                 stmtBajos = conn.createStatement();
                                 String queryBajos = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, altura_suelo, num_divisiones, id_fabricante FROM Mueble WHERE tipo_mueble = 2";
                                 rsBajos = stmtBajos.executeQuery(queryBajos);
@@ -137,11 +162,32 @@
                                     out.println("<td>" + rsBajos.getInt("id_fabricante") + "</td>");
                                     out.println("</tr>");
                                 }
+                        %>
+                    </tbody>
+                </table>
+            </div>
 
+            <h2>Paneles</h2>
+            <div class="table-container">
+                <table id="tablePaneles">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cantidad</th>
+                            <th>Color</th>
+                            <th>Línea</th>
+                            <th>Ancho</th>
+                            <th>Alto</th>
+                            <th>Precio</th>
+                            <th>Fecha de Compra</th>
+                            <th>Material</th>
+                            <th>Tipo de Componente</th>
+                            <th>ID del Fabricante</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
                                 // Paneles
-                                out.println("</tbody></table><h2>Paneles</h2><div class='table-container'><table id='tablePaneles'><thead><tr>");
-                                out.println("<th>ID</th><th>Cantidad</th><th>Color</th><th>Línea</th><th>Ancho</th><th>Alto</th><th>Precio</th><th>Fecha de Compra</th><th>Material</th><th>Tipo de Componente</th><th>ID del Fabricante</th></tr></thead><tbody>");
-
                                 stmtPaneles = conn.createStatement();
                                 String queryPaneles = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, material, t_componente, id_fabricante FROM Mueble WHERE tipo_mueble = 3";
                                 rsPaneles = stmtPaneles.executeQuery(queryPaneles);
@@ -161,11 +207,31 @@
                                     out.println("<td>" + rsPaneles.getInt("id_fabricante") + "</td>");
                                     out.println("</tr>");
                                 }
+                        %>
+                    </tbody>
+                </table>
+            </div>
 
+            <h2>Encimeras</h2>
+            <div class="table-container">
+                <table id="tableEncimeras">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cantidad</th>
+                            <th>Color</th>
+                            <th>Línea</th>
+                            <th>Ancho</th>
+                            <th>Alto</th>
+                            <th>Precio</th>
+                            <th>Fecha de Compra</th>
+                            <th>Material de Encimera</th>
+                            <th>ID del Fabricante</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
                                 // Encimeras
-                                out.println("</tbody></table><h2>Encimeras</h2><div class='table-container'><table id='tableEncimeras'><thead><tr>");
-                                out.println("<th>ID</th><th>Cantidad</th><th>Color</th><th>Línea</th><th>Ancho</th><th>Alto</th><th>Precio</th><th>Fecha de Compra</th><th>Material de Encimera</th><th>ID del Fabricante</th></tr></thead><tbody>");
-
                                 stmtEncimeras = conn.createStatement();
                                 String queryEncimeras = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, mat_enc, id_fabricante FROM Mueble WHERE tipo_mueble = 4";
                                 rsEncimeras = stmtEncimeras.executeQuery(queryEncimeras);
@@ -230,6 +296,8 @@
             });
         });
     </script>
+
+    </div>
 
     <footer>
         <div class="footer-banner">
