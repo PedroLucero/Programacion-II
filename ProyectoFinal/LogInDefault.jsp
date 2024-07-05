@@ -90,7 +90,7 @@
             out.println("archivo config error: " + e.getMessage());
         }
 
-        String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";
+        String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";   
         String dbUsername = prop.getProperty("db.username");
         String dbPassword = prop.getProperty("db.password");
 
@@ -121,7 +121,6 @@
                 String role = rs.getString("ROL");
                 session.setAttribute("username", username);
                 session.setAttribute("role", role);
-
                 out.println("DEBUG: Role: " + role);
 
                 if ("CLIENTE".equalsIgnoreCase(role)) {
@@ -132,6 +131,7 @@
             } else {
                 // Usuario o contraseña incorrectos
                 out.println("<p>Usuario o contraseña incorrectos.</p>");
+                out.println("<h1>DEBUG: "+ rs.getString("Usuario") + "<h1>");
             }
 
         } catch (ClassNotFoundException e) {
