@@ -69,9 +69,9 @@
 
     <nav>
         <ul class="nav-ul-superior">
-            <li class="opcion"><a class="menu-superior" href="HomeDefault.html">HOME</a></li>
+            <li class="opcion"><a class="menu-superior" href="HomeUsuario.html">HOME</a></li>
             <li class="opcion"><a class="menu-superior" href="CatalogoMenu.html">CATALOGO</a></li>
-            <li class="opcion"><a class="menu-superior" href="pagina3.html">CONTACTO</a></li>
+            <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
             <li id="login"><a class="menu-superior" href="LogInDefault.html">INICIAR SESION</a></li>
         </ul>
     </nav>
@@ -98,8 +98,8 @@
                     else {
                         out.println("- Esta cocina no está disponible - <br><br>");
                     }
-                    
-                    out.println("<button>Añadir al carrito</button>");
+                    int id = rs.getInt("ID");
+                    out.println("<button><a class='menu-inferior' href='InfoCocina.jsp?id=" + id + "'></a>Ver detalles</button>");
                     out.println("</div></div>");
                 }
             %>
@@ -127,9 +127,9 @@
         <div class="footer-banner">
             <nav class="footer-nav">
                 <ul>
-                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
+                    <li><a class="menu-inferior" href="HomeUsuario.html">HOME</a></li>
                     <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                    <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
                 </ul>
             </nav>

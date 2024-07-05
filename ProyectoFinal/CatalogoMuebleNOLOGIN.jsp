@@ -70,7 +70,7 @@
     <nav>
         <ul class="nav-ul-superior">
             <li class="opcion"><a class="menu-superior" href="HomeDefault.html">HOME</a></li>
-            <li class="opcion"><a class="menu-superior" href="CatalogoMenu.html">CATALOGO</a></li>
+            <li class="opcion"><a class="menu-superior" href="CatalogoMenuNOLOGIN.html">CATALOGO</a></li>
             <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
             <li id="login"><a class="menu-superior" href="LogInDefault.html">INICIAR SESION</a></li>
         </ul>
@@ -121,20 +121,9 @@
             }
         %>         
             </div>
-             <div id="compras">
-             <h1>Tus Compras</h1>
-        <%
-            while (cqrs.next()) {
-                out.println("<div class='compra'>");
-                String nombre = cqrs.getString("NOMBRE");
-                out.println("<h3>"+  nombre + "</h3>");
-                int cantidad = cqrs.getInt("CANTIDAD");
-                double precio = cqrs.getDouble("PRECIO");
-                out.println("Cantidad: " + cantidad + "<br><br>");
-                out.println("Precio: $" + precio*cantidad +  "<br><br>");
-                out.println("</div>");
-            }
-        %>
+                <div id="compras">
+                <h1>Tus Compras</h1>
+                <h4>Debes inciar sesión para ver tus compras</h4>
         </div>
     </section>
 
@@ -143,7 +132,7 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenuNOLOGIN.html">CATALOGO</a></li>
                     <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
                 </ul>
