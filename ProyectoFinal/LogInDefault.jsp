@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="stylesLogInDefault.css" />
+    <link rel="stylesheet" href="stylesLogInDefault.css">
     <style>
         .modal {
             display: none;
@@ -52,12 +52,12 @@
 
 <body>
     <header>
-        <img src="nb-logow.png" alt="Logo" class="logo" />
+        <img src="nb-logow.png" alt="Logo" class="logo">
         <div class="iconos">
-            <a class="icono" href="https://www.google.com"><img src="lupa-1.png" /></a>
-            <a class="icono" href="https://www.instagram.com"><img src="instagram-1.png" /></a>
-            <a class="icono" href="https://www.tiktok.com/discover?lang=es"><img src="tik-tok.png" /></a>
-            <a class="icono" href="https://www.pinterest.com"><img src="pinterest.png" /></a>
+            <a class="icono" href="https://www.google.com"><img src="lupa-1.png" alt="Buscar"></a>
+            <a class="icono" href="https://www.instagram.com"><img src="instagram-1.png" alt="Instagram"></a>
+            <a class="icono" href="https://www.tiktok.com/discover?lang=es"><img src="tik-tok.png" alt="TikTok"></a>
+            <a class="icono" href="https://www.pinterest.com"><img src="pinterest.png" alt="Pinterest"></a>
         </div>
     </header>
 
@@ -69,7 +69,7 @@
         </ul>
     </nav>
 
-    <section id="home" class="banner">
+    <section class="banner">
         <div class="container_banner">
             <h2>The Art Of Kitchen</h2>
             <p id="slogan">Inicio de Sesión</p>
@@ -78,31 +78,42 @@
 
     <section class="form-section">
         <div class="formularios">
-            <form class="form" id="register-form" method="post" action="registrarse.jsp">
-                <h2>Registrarse</h2>
-                <label for="register-name">Nombre:</label>
-                <input type="text" id="register-name" name="nombre" required />
-                <label for="register-telefono">Telefono:</label>
-                <input type="text" id="register-telefono" name="telefono" required />
-                <label for="register-addy">Dirección:</label>
-                <input type="text" id="register-addy" name="direccion" required />
-                <label for="register-username">Username:</label>
-                <input type="text" id="register-username" name="username" required />
-                <label for="register-password">Password:</label>
-                <input type="password" id="register-password" name="password" required />
-                <button type="submit">Registro</button>
+            <form class="form" id="login-form" method="post" action="LogInDefault.jsp">
+                <h2>Iniciar Sesión</h2>
+                <label for="login-username">Usuario:</label>
+                <input type="text" id="login-username" name="username" required>
+                <label for="login-password">Contraseña:</label>
+                <input type="password" id="login-password" name="password" required>
+                <a href="register.jsp" id="registro-link">Registrarse</a>
+                <button type="submit">Login</button>
             </form>
         </div>
+        <a id="LGTRABAJADOR" href="#">Iniciar sesión como colaborador</a>
     </section>
 
-    <% 
+    <footer>
+        <div class="footer-banner">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
+                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-container">
+            <p>
+                &copy; 2024 The Art of Kitchen. Todos los derechos reservados.
+                Designed in Mouth The Box
+            </p>
+        </div>
+    </footer>
+
+    <%
         boolean success = false;
         String errorMessage = "";
 
         if ("POST".equalsIgnoreCase(request.getMethod())) {
-            String nombre = request.getParameter("nombre");
-            String direccion = request.getParameter("direccion");
-            String telefono = request.getParameter("telefono");
             String username = request.getParameter("username");
             String password = request.getParameter("password");
 
@@ -119,7 +130,8 @@
             String dbPassword = prop.getProperty("db.password");
 
             Connection conn = null;
-            CallableStatement stmt = null;
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
 
             try {
                 // Cargar el controlador JDBC de Oracle
@@ -127,43 +139,44 @@
                 // Establecer la conexión
                 conn = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
 
-                // Preparar la llamada al procedimiento almacenado
-                stmt = conn.prepareCall("{call REGISTRAR_CLIENTE(?, ?, ?, ?, ?)}");
+                // Preparar la consulta SQL
+                String query = "SELECT * FROM CREDENCIALES WHERE USUARIO = ? AND CONTRASENA = ?";
+                stmt = conn.prepareStatement(query);
+                stmt.setString(1, username);
+                stmt.setString(2, password);
 
-                // Establecer los parámetros de entrada
-                stmt.setString(1, nombre);
-                stmt.setString(2, direccion);
-                stmt.setString(3, telefono);
-                stmt.setString(4, username);
-                stmt.setString(5, password);
+                // Ejecutar la consulta
+                rs = stmt.executeQuery();
 
-                // Ejecutar el procedimiento
-                stmt.execute();
-                success = true;
+                if (rs.next()) {
+                    // Usuario y contraseña correctos
+                    String role = rs.getString("ROL");
+                    session.setAttribute("username", username);
+                    session.setAttribute("role", role);
+
+                    if ("CLIENTE".equalsIgnoreCase(role)) {
+                        response.sendRedirect("homeusuario.jsp");
+                    } else if ("EMPLEADO".equalsIgnoreCase(role)) {
+                        response.sendRedirect("employeeHome.jsp");
+                    }
+                } else {
+                    // Usuario o contraseña incorrectos
+                    errorMessage = "Usuario o contraseña incorrectos.";
+                }
 
             } catch (ClassNotFoundException e) {
                 errorMessage = "Error: Oracle JDBC Driver not found.";
             } catch (SQLException e) {
-                if (e.getErrorCode() == 1) {
-                    errorMessage = "Error: El usuario ya existe.";
-                } else {
-                    errorMessage = "SQL Error: " + e.getMessage();
-                }
+                errorMessage = "SQL Error: " + e.getMessage();
             } finally {
+                if (rs != null) try { rs.close(); } catch (SQLException e) {}
                 if (stmt != null) try { stmt.close(); } catch (SQLException e) {}
                 if (conn != null) try { conn.close(); } catch (SQLException e) {}
             }
         }
     %>
 
-    <% if (success) { %>
-    <div id="myModal" class="modal" style="display:block;">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Cliente registrado con éxito.</p>
-        </div>
-    </div>
-    <% } else if (!errorMessage.isEmpty()) { %>
+    <% if (!success && !errorMessage.isEmpty()) { %>
     <div id="myModal" class="modal" style="display:block;">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -173,13 +186,13 @@
     <% } %>
 
     <script>
-        // obtener el modal
+        // Obtener el modal
         var modal = document.getElementById("myModal");
 
-        // esto nos permite cerrar el modal
+        // Obtener el <span> que cierra el modal
         var span = document.getElementsByClassName("close")[0];
 
-        // cuando se hace click en el span(x) se cierra el modal
+        // Cuando el usuario hace click en <span> (x), se cierra el modal
         span.onclick = function() {
             modal.style.display = "none";
         }
@@ -191,21 +204,5 @@
             }
         }
     </script>
-
-    <footer>
-        <div class="footer-banner">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-container">
-            <p>&copy; 2024 The Art of Kitchen. Todos los derechos reservados. Designed in Mouth The Box</p>
-        </div>
-    </footer>
 </body>
-
 </html>
