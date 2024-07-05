@@ -78,7 +78,7 @@
     
     <section class="product-section">
         <div class="product-image">
-            <img src="ruta-de-la-imagen.jpg" alt="Producto">
+            <img src="cocina.png" alt="imagen cocina">
         </div>
         <div class="product-details">
           <%
@@ -134,7 +134,7 @@
                     out.println("<img src='panel.png' alt='Panel'>");
                     out.println("<h3>" + nombre_p + "</h3>");
                     out.println("<p>");
-                    out.println("Material: " + material + "<b><br>");
+                    out.println("Material: " + material + "<br><br>");
                     out.println("Tamaño del componente: " + tam_comp + "<br><br>");
                 break;
                 case 4:
