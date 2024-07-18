@@ -92,10 +92,10 @@
                     <a class="menu-superior" href="inventario.jsp">INVENTARIO</a>
                 </li>
                 <li class="opcion">
-                    <a class="menu-superior" href="Entregas.html">ENTREGAS</a>
+                    <a class="menu-superior" href="Entregas.jsp">ENTREGAS</a>
                 </li>
                 <li id="login">
-                    <a class="menu-superior" href="LogInDefault.jsp">CERRAR SESION</a>
+                    <a class="menu-superior" href="HomeDefault.html">CERRAR SESION</a>
                 </li>
             </ul>
         </nav>
@@ -141,7 +141,7 @@
         <div class="footer-banner">
             <nav class="footer-nav">
                 <ul>
-                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
+                    <li><a class="menu-inferior" href="HomeUsuario.html">HOME</a></li>
                     <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
                     <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
