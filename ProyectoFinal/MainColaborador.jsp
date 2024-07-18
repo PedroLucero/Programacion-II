@@ -7,11 +7,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%
-    String username = (String) session.getAttribute("username");
-    if (username == null) {
-        response.sendRedirect("LogInDefault.jsp");
-        return;
-    }
+    // Asignar usuario "johndoe" para probar
+    String username = "johndoe";
+    session.setAttribute("username", username);
 
     Properties prop = new Properties();
     String configPath = application.getRealPath("WEB-INF/config.properties");
@@ -41,7 +39,7 @@
         conn = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
 
         // Preparar la consulta SQL
-        String query = "SELECT u.id, u.nombre, u.telefono, u.direccion FROM usuario u JOIN credenciales c ON u.id = c.id WHERE c.usuario = ?";
+        String query = "SELECT u.id, u.nombre, u.telefono, u.direccion FROM usuario u JOIN credenciales c ON u.id_credenciales = c.id WHERE c.usuario = ?";
         stmt = conn.prepareStatement(query);
         stmt.setString(1, username);
 
