@@ -7,9 +7,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%
-    // Asignar usuario "johndoe" para probar
-    String username = "johndoe";
-    session.setAttribute("username", username);
+    String username = (String) session.getAttribute("username");
+    String role = (String) session.getAttribute("role");
+    if (username == null || role == null || !role.equalsIgnoreCase("EMPLEADO")) {
+        response.sendRedirect("LogInDefault.jsp");
+        return;
+    }
 
     Properties prop = new Properties();
     String configPath = application.getRealPath("WEB-INF/config.properties");
@@ -92,10 +95,10 @@
                     <a class="menu-superior" href="inventario.jsp">INVENTARIO</a>
                 </li>
                 <li class="opcion">
-                    <a class="menu-superior" href="pagina3.html">ENTREGAS</a>
+                    <a class="menu-superior" href="entregas.jsp">ENTREGAS</a>
                 </li>
                 <li id="login">
-                    <a class="menu-superior" href="LogInDefault.jsp">CERRAR SESION</a>
+                    <a class="menu-superior" href="LogInDefault.jsp">CERRAR SESIÓN</a>
                 </li>
             </ul>
         </nav>
@@ -142,9 +145,9 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="catalogo.html">CATÁLOGO</a></li>
                     <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
-                    <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
+                    <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESIÓN</a></li>
                 </ul>
             </nav>
         </div>
