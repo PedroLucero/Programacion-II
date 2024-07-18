@@ -81,6 +81,7 @@
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
+<<<<<<< HEAD
         if (username != null && password != null) {
             Properties prop = new Properties();
             String configPath = application.getRealPath("WEB-INF/config.properties");
@@ -88,6 +89,62 @@
                 prop.load(input);
             } catch (Exception e) {
                 out.println("archivo config error: " + e.getMessage());
+=======
+        // Mensajes de depuración
+        out.println("DEBUG: Username: " + username);
+        out.println("DEBUG: Password: " + password);
+
+        Properties prop = new Properties();
+        String configPath = application.getRealPath("WEB-INF/config.properties");
+        try (InputStream input = new FileInputStream(configPath)) {
+            prop.load(input);
+        } catch (Exception e) {
+            out.println("archivo config error: " + e.getMessage());
+        }
+
+        String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";   
+        String dbUsername = prop.getProperty("db.username");
+        String dbPassword = prop.getProperty("db.password");
+
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            // Cargar el controlador JDBC de Oracle
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            // Establecer la conexión
+            conn = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
+
+            // Mensajes de depuración
+            out.println("DEBUG: Connected to database");
+
+            // Preparar la consulta SQL
+            String query = "SELECT * FROM CREDENCIALES WHERE USUARIO = ? AND CONTRASENA = ?";
+            stmt = conn.prepareStatement(query);
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+
+            // Ejecutar la consulta
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                // Usuario y contraseña correctos
+                String role = rs.getString("ROL");
+                session.setAttribute("username", username);
+                session.setAttribute("role", role);
+                out.println("DEBUG: Role: " + role);
+
+                if ("CLIENTE".equalsIgnoreCase(role)) {
+                    response.sendRedirect("HomeUsuario.jsp");
+                } else if ("EMPLEADO".equalsIgnoreCase(role)) {
+                    response.sendRedirect("MainColaborador.jsp");
+                }
+            } else {
+                // Usuario o contraseña incorrectos
+                out.println("<p>Usuario o contraseña incorrectos.</p>");
+                out.println("<h1>DEBUG: "+ rs.getString("Usuario") + "<h1>");
+>>>>>>> 150f349601c1285a7aa8b9e9e05e2e06f8f80075
             }
 
             String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";
