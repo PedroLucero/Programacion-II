@@ -89,7 +89,7 @@
         <nav class="nav-superior">
             <ul class="nav-ul-superior">
                 <li class="opcion">
-                    <a class="menu-superior" href="maincolaborador.jsp">PERFIL DEL COLABORADOR</a>
+                    <a class="menu-superior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a>
                 </li>
                 <li class="opcion">
                     <a class="menu-superior" href="inventario.jsp">INVENTARIO</a>
