@@ -81,15 +81,6 @@
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-<<<<<<< HEAD
-        if (username != null && password != null) {
-            Properties prop = new Properties();
-            String configPath = application.getRealPath("WEB-INF/config.properties");
-            try (InputStream input = new FileInputStream(configPath)) {
-                prop.load(input);
-            } catch (Exception e) {
-                out.println("archivo config error: " + e.getMessage());
-=======
         // Mensajes de depuración
         out.println("DEBUG: Username: " + username);
         out.println("DEBUG: Password: " + password);
@@ -144,7 +135,6 @@
                 // Usuario o contraseña incorrectos
                 out.println("<p>Usuario o contraseña incorrectos.</p>");
                 out.println("<h1>DEBUG: "+ rs.getString("Usuario") + "<h1>");
->>>>>>> 150f349601c1285a7aa8b9e9e05e2e06f8f80075
             }
 
             String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";
