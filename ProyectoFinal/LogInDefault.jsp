@@ -50,7 +50,7 @@
                 <input type="text" id="login-username" name="username" required>
                 <label for="login-password">Contraseña:</label>
                 <input type="password" id="login-password" name="password" required>
-                <a href="registrarse.jsp" id="registro-link">Registrarse</a>
+                <a href="register.jsp" id="registro-link">Registrarse</a>
                 <button type="submit">Login</button>
             </form>
         </div>
@@ -61,16 +61,13 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
         <div class="footer-container">
-            <p>
-                &copy; 2024 The Art of Kitchen. Todos los derechos reservados.
-                Designed in Mouth The Box
-            </p>
+            <p>&copy; 2024 The Art of Kitchen. Todos los derechos reservados. Designed in Mouth The Box</p>
         </div>
     </footer>
 </body>
@@ -78,16 +75,9 @@
 
 <%
     if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String username = request.getParameter("username").trim();
+        String password = request.getParameter("password").trim();
 
-        if (username != null && password != null) {
-            Properties prop = new Properties();
-            String configPath = application.getRealPath("WEB-INF/config.properties");
-            try (InputStream input = new FileInputStream(configPath)) {
-                prop.load(input);
-            } catch (Exception e) {
-                out.println("archivo config error: " + e.getMessage());
         // Mensajes de depuración
         out.println("DEBUG: Username: " + username);
         out.println("DEBUG: Password: " + password);
@@ -134,7 +124,7 @@
                 out.println("DEBUG: Role: " + role);
 
                 if ("CLIENTE".equalsIgnoreCase(role)) {
-                    response.sendRedirect("HomeUsuario.jsp");
+                    response.sendRedirect("HomeUsuario.html");
                 } else if ("EMPLEADO".equalsIgnoreCase(role)) {
                     response.sendRedirect("MainColaborador.jsp");
                 }
@@ -144,69 +134,14 @@
                 out.println("<h1>DEBUG: "+ rs.getString("Usuario") + "<h1>");
             }
 
-            String jdbcUrl = "jdbc:oracle:thin:@//localhost:1521/XE";
-            String dbUsername = prop.getProperty("db.username");
-            String dbPassword = prop.getProperty("db.password");
-
-            Connection conn = null;
-            PreparedStatement stmt = null;
-            ResultSet rs = null;
-
-            try {
-                // Cargar el controlador JDBC de Oracle
-                Class.forName("oracle.jdbc.driver.OracleDriver");
-                // Establecer la conexión
-                conn = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
-
-                // Depuración: imprimir credenciales ingresadas
-                out.println("DEBUG: Username: " + username.trim());
-                out.println("DEBUG: Password: " + password.trim());
-
-                // Preparar la consulta SQL
-                String query = "SELECT * FROM CREDENCIALES WHERE TRIM(USUARIO) = ? AND TRIM(CONTRASENA) = ?";
-                stmt = conn.prepareStatement(query);
-                stmt.setString(1, username.trim());
-                stmt.setString(2, password.trim());
-
-                // Ejecutar la consulta
-                rs = stmt.executeQuery();
-
-                if (rs.next()) {
-                    // Depuración: imprimir credenciales obtenidas de la base de datos
-                    String dbUsernameRetrieved = rs.getString("USUARIO").trim();
-                    String dbPasswordRetrieved = rs.getString("CONTRASENA").trim();
-                    String dbRoleRetrieved = rs.getString("ROL").trim();
-
-                    out.println("DEBUG: DB Username: " + dbUsernameRetrieved);
-                    out.println("DEBUG: DB Password: " + dbPasswordRetrieved);
-                    out.println("DEBUG: DB Role: " + dbRoleRetrieved);
-
-                    // Usuario y contraseña correctos
-                    String role = rs.getString("ROL").trim();
-                    session.setAttribute("username", username);
-                    session.setAttribute("role", role);
-
-                    if ("CLIENTE".equalsIgnoreCase(role)) {
-                        response.sendRedirect("HomeUsuario.html");
-                    } else if ("EMPLEADO".equalsIgnoreCase(role)) {
-                        response.sendRedirect("MainColaborador.jsp");
-                    }
-                } else {
-                    // Depuración: imprimir si no se encontró el usuario
-                    out.println("DEBUG: Usuario no encontrado.");
-                    // Usuario o contraseña incorrectos
-                    out.println("<p>Usuario o contraseña incorrectos.</p>");
-                }
-
-            } catch (ClassNotFoundException e) {
-                out.println("Error: Oracle JDBC Driver not found.");
-            } catch (SQLException e) {
-                out.println("SQL Error: " + e.getMessage());
-            } finally {
-                if (rs != null) try { rs.close(); } catch (SQLException e) {}
-                if (stmt != null) try { stmt.close(); } catch (SQLException e) {}
-                if (conn != null) try { conn.close(); } catch (SQLException e) {}
-            }
+        } catch (ClassNotFoundException e) {
+            out.println("Error: Oracle JDBC Driver not found.");
+        } catch (SQLException e) {
+            out.println("SQL Error: " + e.getMessage());
+        } finally {
+            if (rs != null) try { rs.close(); } catch (SQLException e) {}
+            if (stmt != null) try { stmt.close(); } catch (SQLException e) {}
+            if (conn != null) try { conn.close(); } catch (SQLException e) {}
         }
     }
 %>
