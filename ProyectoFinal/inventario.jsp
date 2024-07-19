@@ -65,7 +65,7 @@
                             <th>Altura</th>
                             <th>Capacidad de Peso</th>
                             <th>Divisiones</th>
-                            <th>ID del Fabricante</th>
+                            <th>Fabricante</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,7 +98,7 @@
 
                                 // Muebles Altos
                                 stmtAltos = conn.createStatement();
-                                String queryAltos = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, altura, c_peso, divisiones, id_fabricante FROM Mueble WHERE tipo_mueble = 1";
+                                String queryAltos = "SELECT M.ID, cantidad, color, linea, ancho, alto, precio, fecha_compra, altura, c_peso, divisiones, nombre FROM Mueble M join Fabricante F on m.id_fabricante = F.id where m.tipo_mueble = 1";
                                 rsAltos = stmtAltos.executeQuery(queryAltos);
 
                                 while (rsAltos.next()) {
@@ -114,7 +114,7 @@
                                     out.println("<td>" + rsAltos.getBigDecimal("altura") + "</td>");
                                     out.println("<td>" + rsAltos.getInt("c_peso") + "</td>");
                                     out.println("<td>" + rsAltos.getInt("divisiones") + "</td>");
-                                    out.println("<td>" + rsAltos.getInt("id_fabricante") + "</td>");
+                                    out.println("<td>" + rsAltos.getString("nombre") + "</td>");
                                     out.println("</tr>");
                                 }
                         %>
@@ -137,14 +137,14 @@
                             <th>Fecha de Compra</th>
                             <th>Altura del Suelo</th>
                             <th>Número de Divisiones</th>
-                            <th>ID del Fabricante</th>
+                            <th>Fabricante</th>
                         </tr>
                     </thead>
                     <tbody>
                         <%
                                 // Muebles Bajos
                                 stmtBajos = conn.createStatement();
-                                String queryBajos = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, altura_suelo, num_divisiones, id_fabricante FROM Mueble WHERE tipo_mueble = 2";
+                                String queryBajos = "SELECT M.ID, cantidad, color, linea, ancho, alto, precio, fecha_compra, altura_suelo, num_divisiones,  nombre FROM Mueble M join Fabricante F on m.id_fabricante = F.id where m.tipo_mueble = 2";
                                 rsBajos = stmtBajos.executeQuery(queryBajos);
 
                                 while (rsBajos.next()) {
@@ -159,7 +159,7 @@
                                     out.println("<td>" + rsBajos.getDate("fecha_compra") + "</td>");
                                     out.println("<td>" + rsBajos.getBigDecimal("altura_suelo") + "</td>");
                                     out.println("<td>" + rsBajos.getInt("num_divisiones") + "</td>");
-                                    out.println("<td>" + rsBajos.getInt("id_fabricante") + "</td>");
+                                    out.println("<td>" + rsBajos.getString("nombre") + "</td>");
                                     out.println("</tr>");
                                 }
                         %>
@@ -182,14 +182,14 @@
                             <th>Fecha de Compra</th>
                             <th>Material</th>
                             <th>Tipo de Componente</th>
-                            <th>ID del Fabricante</th>
+                            <th>Fabricante</th>
                         </tr>
                     </thead>
                     <tbody>
                         <%
                                 // Paneles
                                 stmtPaneles = conn.createStatement();
-                                String queryPaneles = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, material, t_componente, id_fabricante FROM Mueble WHERE tipo_mueble = 3";
+                                String queryPaneles = "SELECT M.ID, cantidad, color, linea, ancho, alto, precio, fecha_compra, material, t_componente,  nombre FROM Mueble M join Fabricante F on m.id_fabricante = F.id where m.tipo_mueble = 3";
                                 rsPaneles = stmtPaneles.executeQuery(queryPaneles);
 
                                 while (rsPaneles.next()) {
@@ -204,7 +204,7 @@
                                     out.println("<td>" + rsPaneles.getDate("fecha_compra") + "</td>");
                                     out.println("<td>" + rsPaneles.getString("material") + "</td>");
                                     out.println("<td>" + rsPaneles.getString("t_componente") + "</td>");
-                                    out.println("<td>" + rsPaneles.getInt("id_fabricante") + "</td>");
+                                    out.println("<td>" + rsPaneles.getString("nombre") + "</td>");
                                     out.println("</tr>");
                                 }
                         %>
@@ -226,14 +226,14 @@
                             <th>Precio</th>
                             <th>Fecha de Compra</th>
                             <th>Material de Encimera</th>
-                            <th>ID del Fabricante</th>
+                            <th>Fabricante</th>
                         </tr>
                     </thead>
                     <tbody>
                         <%
                                 // Encimeras
                                 stmtEncimeras = conn.createStatement();
-                                String queryEncimeras = "SELECT id, cantidad, color, linea, ancho, alto, precio, fecha_compra, mat_enc, id_fabricante FROM Mueble WHERE tipo_mueble = 4";
+                                String queryEncimeras = "SELECT M.ID, cantidad, color, linea, ancho, alto, precio, fecha_compra, mat_enc,  nombre FROM Mueble M join Fabricante F on m.id_fabricante = F.id where m.tipo_mueble = 4";
                                 rsEncimeras = stmtEncimeras.executeQuery(queryEncimeras);
 
                                 while (rsEncimeras.next()) {
@@ -247,7 +247,7 @@
                                     out.println("<td>" + rsEncimeras.getBigDecimal("precio") + "</td>");
                                     out.println("<td>" + rsEncimeras.getDate("fecha_compra") + "</td>");
                                     out.println("<td>" + rsEncimeras.getString("mat_enc") + "</td>");
-                                    out.println("<td>" + rsEncimeras.getInt("id_fabricante") + "</td>");
+                                    out.println("<td>" + rsEncimeras.getString("nombre") + "</td>");
                                     out.println("</tr>");
                                 }
                             } catch (SQLException e) {
