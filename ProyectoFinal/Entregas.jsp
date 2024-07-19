@@ -33,7 +33,7 @@
             <ul class="nav-ul-superior">
                 <li class="opcion"><a class="menu-superior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a></li>
                 <li class="opcion"><a class="menu-superior" href="inventario.jsp">INVENTARIO</a></li>
-                <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
+                <li class="opcion"><a class="menu-superior" href="Entregas.jsp">ENTREGAS</a></li>
                 <li id="login"><a class="menu-superior" href="LogInDefault.jsp">CERRAR SESION</a></li>
             </ul>
         </nav>
@@ -41,10 +41,9 @@
         <div class="content">
             <section id="home" class="banner">
                 <div class="container_banner">
-                 <!--  <h2>Bienvenidos a The Art Of Kitchen</h2>
-                    <p id="slogan">"Crafting Culinary Elegance"</p> -->
+                 <h2>Entregas</h2>
+                    <!--  <p id="slogan">"Crafting Culinary Elegance"</p> -->
 
-                   <h1> Entregas </h1> 
                 </div>
             </section>
 
@@ -128,10 +127,10 @@
         <div class="footer-banner">
             <nav class="footer-nav">
                 <ul>
-                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="CatalogoMenu.jsp">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
-                    <li><a class="menu-inferior" href="HomeDefault.html">CERRAR SESION</a></li>
+                    <li><a class="menu-inferior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a></li>
+                    <li><a class="menu-inferior" href="inventario.jsp">INVENTARIO</a></li>
+                    <li><a class="menu-inferior" href="Entregas.jsp">ENTREGAS</a></li>
+                    <li><a class="menu-inferior" href="LogInDefault.jsp">CERRAR SESION</a></li>
                 </ul>
             </nav>
         </div>

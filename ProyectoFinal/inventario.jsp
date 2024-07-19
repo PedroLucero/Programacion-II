@@ -42,12 +42,12 @@
         <div class="content">
             <section id="home" class="banner">
                 <div class="container_banner">
-                    <h2>Bienvenidos a The Art Of Kitchen</h2>
-                    <p id="slogan">"Crafting Culinary Elegance"</p>
+                    <h2>Inventario</h2>
+                    <%-- <p id="slogan">"Crafting Culinary Elegance"</p> --%>
                 </div>
             </section>
             
-            <h1>Inventario de Muebles</h1>
+            <%-- <h1>Inventario de Muebles</h1> --%>
 
             <h2>Muebles Altos</h2>
             <div class="table-container">
@@ -306,7 +306,7 @@
                     <li><a class="menu-inferior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a></li>
                     <li><a class="menu-inferior" href="inventario.jsp">INVENTARIO</a></li>
                     <li><a class="menu-inferior" href="Entregas.jsp">ENTREGAS</a></li>
-                    <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
+                    <li><a class="menu-inferior" id="logout" href="LogInDefault.jsp">CERRAR SESION</a></li>
                 </ul>
             </nav>
         </div>

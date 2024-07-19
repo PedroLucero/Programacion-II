@@ -144,10 +144,10 @@
         <div class="footer-banner">
             <nav class="footer-nav">
                 <ul>
-                    <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATÁLOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
-                    <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESIÓN</a></li>
+                    <li><a class="menu-inferior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a></li>
+                    <li><a class="menu-inferior" href="inventario.jsp">INVENTARIO</a></li>
+                    <li><a class="menu-inferior" href="Entregas.jsp">ENTREGAS</a></li>
+                    <li><a class="menu-inferior" id="logout" href="LogInDefault.jsp">CERRAR SESIÓN</a></li>
                 </ul>
             </nav>
         </div>
