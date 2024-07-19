@@ -46,8 +46,8 @@ header {
     padding: 20px;
     width: 200px;
     height: 100%;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: auto;
     left: 0;
 }
 

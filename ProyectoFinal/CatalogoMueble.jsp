@@ -39,7 +39,7 @@
 
 <nav>
     <ul class="nav-ul-superior">
-        <li class="opcion"><a class="menu-superior" href="HomeUsuario.html">HOME</a></li>
+        <li class="opcion"><a class="menu-superior" href="HomeUsuario.jsp">HOME</a></li>
         <li class="opcion"><a class="menu-superior" href="CatalogoMenu.jsp">CATÁLOGO</a></li>
         <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
         <li id="login"><a class="menu-superior" href="PerfilCliente.jsp">Hola, <%= nombreUsuario %></a></li>

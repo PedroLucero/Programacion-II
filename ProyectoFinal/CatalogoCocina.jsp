@@ -82,7 +82,7 @@
 
     <nav>
         <ul class="nav-ul-superior">
-            <li class="opcion"><a class="menu-superior" href="HomeUsuario.html">HOME</a></li>
+            <li class="opcion"><a class="menu-superior" href="HomeUsuario.jsp">HOME</a></li>
             <li class="opcion"><a class="menu-superior" href="CatalogoMenu.jsp">CATALOGO</a></li>
             <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
             <li id="login"><a class="menu-superior" href="PerfilCliente.jsp">Hola, <%= nombreUsuario %></a></li>
@@ -142,7 +142,7 @@
         <div class="footer-banner">
             <nav class="footer-nav">
                 <ul>
-                    <li><a class="menu-inferior" href="HomeUsuario.html">HOME</a></li>
+                    <li><a class="menu-inferior" href="HomeUsuario.jsp">HOME</a></li>
                     <li><a class="menu-inferior" href="CatalogoMenu.jsp">CATALOGO</a></li>
                     <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" href="LogInDefault.jsp">CERRAR SESION</a></li>

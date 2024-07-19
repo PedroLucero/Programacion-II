@@ -36,7 +36,7 @@
     <nav>
         <ul class="nav-ul-superior">
             <li class="opcion"><a class="menu-superior" href="HomeDefault.html">HOME</a></li>
-            <li class="opcion"><a class="menu-superior" href="CatalogoMenu.html">CATÁLOGO</a></li>
+            <li class="opcion"><a class="menu-superior" href="CatalogoMenu.jsp">CATÁLOGO</a></li>
             <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
             <li id="login"><a class="menu-superior" href="PerfilCliente.jsp">HOLA, <%= nombreUsuario %></a></li>
         </ul>
@@ -87,7 +87,7 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="CatalogoMenu.html">CATÁLOGO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenu.jsp">CATÁLOGO</a></li>
                     <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESIÓN</a></li>
                 </ul>
