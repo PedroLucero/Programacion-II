@@ -1,8 +1,8 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.sql.*" %>
-<%@ page import="java.util.Properties" %>
-<%@ page import="java.io.InputStream" %>
-<%@ page import="java.io.FileInputStream" %>
+<%@ page import="java.util.Properties"%>
+<%@ page import="java.io.InputStream"%>
+<%@ page import="java.io.FileInputStream"%>
 <%@ page import="oracle.jdbc.driver.OracleDriver" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entregas</title>
     <link rel="stylesheet" href="stylesEntregas.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -46,7 +47,7 @@
             </section>
 
             <div class="table-container">
-                <table>
+                <table id="entregasTable" class="display">
                     <thead>
                         <tr>
                             <th>REPARTIDOR</th>
@@ -126,9 +127,9 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATALOGO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenu.jsp">CATALOGO</a></li>
                     <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
-                    <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
+                    <li><a class="menu-inferior" href="HomeDefault.html">CERRAR SESION</a></li>
                 </ul>
             </nav>
         </div>
@@ -139,6 +140,18 @@
             </p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#entregasTable').DataTable({
+                "paging": false, // Disable pagination
+                "info": false, // Disable the info text
+                "dom": '<"top"f>rt<"bottom"i><"clear">' // Only show the search bar
+            });
+        });
+    </script>
 </body>
 
 </html>
