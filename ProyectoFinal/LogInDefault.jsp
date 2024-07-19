@@ -50,7 +50,7 @@
                 <input type="text" id="login-username" name="username" required>
                 <label for="login-password">Contraseña:</label>
                 <input type="password" id="login-password" name="password" required>
-                <a href="register.jsp" id="registro-link">Registrarse</a>
+                <a href="registrarse.jsp" id="registro-link">Registrarse</a>
                 <button type="submit">Login</button>
             </form>
         </div>
