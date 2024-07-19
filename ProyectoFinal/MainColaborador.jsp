@@ -95,7 +95,7 @@
                     <a class="menu-superior" href="inventario.jsp">INVENTARIO</a>
                 </li>
                 <li class="opcion">
-                    <a class="menu-superior" href="entregas.jsp">ENTREGAS</a>
+                    <a class="menu-superior" href="Entregas.jsp">ENTREGAS</a>
                 </li>
                 <li id="login">
                     <a class="menu-superior" href="LogInDefault.jsp">CERRAR SESIÓN</a>
