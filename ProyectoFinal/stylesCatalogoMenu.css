@@ -128,8 +128,8 @@ nav {
 }
 
 .image-link img {
-  width: 300px; /* Ajusta según el tamaño deseado */
-  height: 300px; /* Ajusta según el tamaño deseado */
+  width: 300px;
+  height: 300px;
   object-fit: cover; /* Mantiene la proporción de la imagen */
   border-radius: 10px; /* Bordes redondeados, opcional */
 }

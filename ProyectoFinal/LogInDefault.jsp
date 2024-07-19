@@ -61,8 +61,8 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="catalogo.html">CATÁLOGO</a></li>
-                    <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
+                    <li><a class="menu-inferior" href="CatalogoMenu.jsp">CATÁLOGO</a></li>
+                    <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>

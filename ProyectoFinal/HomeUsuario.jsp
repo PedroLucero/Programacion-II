@@ -38,7 +38,7 @@
             <li class="opcion"><a class="menu-superior" href="HomeDefault.html">HOME</a></li>
             <li class="opcion"><a class="menu-superior" href="CatalogoMenu.html">CATÁLOGO</a></li>
             <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
-            <li id="login"><a class="menu-superior" href="PerfilCliente.html">HOLA, <%= nombreUsuario %></a></li>
+            <li id="login"><a class="menu-superior" href="PerfilCliente.jsp">HOLA, <%= nombreUsuario %></a></li>
         </ul>
     </nav>
 
