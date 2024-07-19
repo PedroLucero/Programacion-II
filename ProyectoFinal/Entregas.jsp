@@ -30,7 +30,7 @@
     <div class="container">
         <nav class="nav-superior">
             <ul class="nav-ul-superior">
-                <li class="opcion"><a class="menu-superior" href="maincolaborador.jsp">PERFIL DEL COLABORADOR</a></li>
+                <li class="opcion"><a class="menu-superior" href="MainColaborador.jsp">PERFIL DEL COLABORADOR</a></li>
                 <li class="opcion"><a class="menu-superior" href="inventario.jsp">INVENTARIO</a></li>
                 <li class="opcion"><a class="menu-superior" href="Contacto.html">CONTACTO</a></li>
                 <li id="login"><a class="menu-superior" href="LogInDefault.jsp">INICIAR SESION</a></li>

@@ -95,17 +95,10 @@
                     <a class="menu-superior" href="inventario.jsp">INVENTARIO</a>
                 </li>
                 <li class="opcion">
-<<<<<<< HEAD
                     <a class="menu-superior" href="Entregas.jsp">ENTREGAS</a>
                 </li>
                 <li id="login">
-                    <a class="menu-superior" href="HomeDefault.html">CERRAR SESION</a>
-=======
-                    <a class="menu-superior" href="entregas.jsp">ENTREGAS</a>
-                </li>
-                <li id="login">
                     <a class="menu-superior" href="LogInDefault.jsp">CERRAR SESIÓN</a>
->>>>>>> 43935a0db6b1261b42c87a3b3b7b1c23148d3ef8
                 </li>
             </ul>
         </nav>
@@ -151,17 +144,10 @@
         <div class="footer-banner">
             <nav class="footer-nav">
                 <ul>
-<<<<<<< HEAD
-                    <li><a class="menu-inferior" href="HomeUsuario.html">HOME</a></li>
-                    <li><a class="menu-inferior" href="CatalogoMenu.html">CATALOGO</a></li>
-                    <li><a class="menu-inferior" href="Contacto.html">CONTACTO</a></li>
-                    <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESION</a></li>
-=======
                     <li><a class="menu-inferior" href="HomeDefault.html">HOME</a></li>
                     <li><a class="menu-inferior" href="catalogo.html">CATÁLOGO</a></li>
                     <li><a class="menu-inferior" href="contacto.html">CONTACTO</a></li>
                     <li><a class="menu-inferior" id="logout" href="HomeDefault.html">CERRAR SESIÓN</a></li>
->>>>>>> 43935a0db6b1261b42c87a3b3b7b1c23148d3ef8
                 </ul>
             </nav>
         </div>
