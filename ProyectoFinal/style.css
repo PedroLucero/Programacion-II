@@ -1,0 +1,11 @@
+/* Paleta de colores */
+:root {
+    --verde-claro: #037971ff;
+    --verde-oscuro: #023436ff;
+    --crema: #c0b7b1ff;
+    /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
+    --violeta-claro: #665687ff;
+    --violeta-oscuro: #5d4e6dff;
+    --naranja: #f79256ff;
+    --celeste: #bbd5edff;
+}

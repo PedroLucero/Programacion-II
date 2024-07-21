@@ -1,0 +1,191 @@
+:root {
+    --verde-claro: #037971ff;
+    --verde-oscuro: #023436ff;
+    --crema: rgb(205, 205, 205);
+    --naranja: #f79256ff;
+    --celeste: #bbd5edff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--verde-claro);
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logo {
+    width: 7%;
+    height: auto;
+}
+
+.iconos {
+    display: flex;
+    gap: 15px;
+}
+
+.icono img {
+    width: 30px;
+    height: auto;
+}
+
+.nav-superior {
+    background-color: var(--verde-oscuro);
+    padding: 20px;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: auto;
+    left: 0;
+}
+
+.nav-ul-superior {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.opcion {
+    margin: 15px 0;
+}
+
+
+.menu-superior {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.menu-superior:hover {
+    background-color: var(--naranja);
+    color: black;
+    font-weight: 525;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.banner {
+    background: url('furniture.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 3%;
+    background-color: var(--celeste);
+}
+
+.banner h2 {
+    font-size: xx-large;
+}
+
+#slogan {
+    font-style: italic;
+    font-weight: 600;
+    font-size: medium;
+}
+
+.table-container {
+    width: 75%;
+    margin: 0 auto;
+    overflow-x: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--crema);
+    color: var(--verde-oscuro);
+}
+
+.main-content {
+    margin-left: 220px;
+    /* Ajusta este valor según el ancho de tu nav lateral */
+    padding: 20px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-container {
+    font-size: small;
+    font-style: italic;
+}
+
+.footer-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul li {
+    text-align: center;
+}
+
+.menu-inferior {
+    color: #ffffff;
+    font-size: small;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.menu-inferior:hover {
+    color: var(--naranja);
+    font-weight: 525;
+}
+
+#logout:hover {
+    color: var(--verde-claro);
+    font-weight: 540;
+}

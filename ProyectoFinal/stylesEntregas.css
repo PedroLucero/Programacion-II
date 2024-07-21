@@ -1,0 +1,223 @@
+        :root {
+            --verde-claro: #037971;
+            --verde-oscuro: #023436;
+            --crema: rgb(205, 205, 205);
+            --naranja: #f79256;
+            --celeste: #bbd5ed;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --------------------------------------------------------------HEADER---------------------------------------------------------------------- */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--verde-claro);
+            color: #fff;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Estilos para la imagen */
+        .logo {
+            width: 7%;
+            height: auto;
+        }
+
+        /* Estilos para los iconos */
+        .iconos {
+            display: flex;
+            gap: 15px;
+        }
+
+
+        .icono img {
+            width: 30px;
+            height: auto;
+        }
+
+        /*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+
+        /* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
+        .nav-superior {
+            background-color: var(--verde-oscuro);
+            width: 10%;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .nav-ul-superior {
+            list-style: none;
+            padding: 0;
+        }
+
+        .opcion {
+            margin: 20px 0;
+        }
+
+        .menu-superior {
+            color: #ffffff;
+            font-size: 80%;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .menu-superior:hover {
+            /* color: var(--naranja); */
+            background-color: var(--naranja);
+            color: black;
+            font-weight: 525;
+        }
+
+
+        #login .menu-superior:hover {
+            background-color: var(--crema);
+            color: black;
+            font-weight: 525;
+        }
+
+        /*------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+        .content {
+            flex: 1;
+            /* padding: 20px; */
+            margin-bottom: 50px;
+        }
+
+        /* ---------------------------------------------------BANNER-------------------------------------------------------------------------------------- */
+        .banner {
+            /* background: url('furniture.jpg') no-repeat center center/cover; */
+            color: black;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--celeste);
+            margin-bottom: 20px;
+        }
+
+        .banner h2 {
+            font-size: xx-large;
+        }
+
+        #slogan {
+            font-style: italic;
+            font-weight: 600;
+            font-size: medium;
+        }
+
+        /*------------------------------------------------------------------------------------------------------------------------------------------------*/
+        /* ---------------------------------------------------TABLA DE ENTREGAS-------------------------------------------------------------------------------------- */
+
+        .table-container {
+            width: 75%;
+            margin: 0 auto;
+            margin-top: 5%;
+            overflow-x: auto;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: var(--crema);
+        }
+
+        /* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .footer-container {
+            font-size: small;
+            font-style: italic;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+        /* ---------------------------------------------------FOOTER NAV-------------------------------------------------------------------------------------- */
+
+        .footer-nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            /* float: left; */
+            height: inherit;
+        }
+
+        .footer-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-nav ul li {
+            /* margin-bottom: 10px; */
+            text-align: center;
+        }
+
+        .footer-banner {
+            /* background-color: var(--vermilion); */
+            width: 100%;
+            display: inline-block;
+        }
+
+
+        .menu-inferior {
+            color: #ffffff;
+            font-size: small;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .menu-inferior:hover {
+            /* color: var(--naranja); */
+            /* background-color: var(--naranja); */
+            color: var(--naranja);
+            font-weight: 525;
+        }
+
+        #logout:hover {
+            color: var(--verde-claro);
+            font-weight: 540;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------------------------------------------------- */

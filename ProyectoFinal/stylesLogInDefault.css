@@ -1,0 +1,280 @@
+:root {
+  --verde-claro: #037971ff;
+  --verde-oscuro: #023436ff;
+  --crema: rgb(205, 205, 205);
+  /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
+  --violeta-claro: #665687ff;
+  --violeta-oscuro: #5d4e6dff;
+  --naranja: #f79256ff;
+  --celeste: #bbd5edff;
+  --yellow-green: #9acd32ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c0b7b1ff;
+}
+
+/* --------------------------------------------------------------HEADER---------------------------------------------------------------------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--verde-claro);
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Estilos para la imagen */
+.logo {
+  width: 7%;
+  height: auto;
+}
+
+/* Estilos para los iconos */
+.iconos {
+  display: flex;
+  gap: 15px;
+}
+
+.icono img {
+  width: 30px;
+  height: auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
+nav {
+  background-color: var(--verde-oscuro);
+}
+
+.nav-ul-superior {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  font-size: 80%;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu-superior {
+  color: #ffffff;
+  font-size: 80%;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
+}
+
+.menu-superior:hover {
+  /* color: var(--naranja); */
+  background-color: var(--naranja);
+  color: black;
+  font-weight: 525;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------BANNER-------------------------------------------------------------------------------------- */
+.banner {
+  background: url("furniture.jpg") no-repeat center center/cover;
+  color: black;
+  text-align: center;
+  padding: 3%;
+  background-color: #c25e24;
+}
+
+.banner h2 {
+  font-size: xx-large;
+}
+
+#slogan {
+  font-style: italic;
+  font-weight: 600;
+  font-size: medium;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------LOGIN LINKS-------------------------------------------------------------------------------------- */
+.login {
+  background-color: var(--violeta-claro);
+  padding: 10px;
+  text-align: center;
+}
+
+.container_login {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.links {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: var(--naranja);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.links:hover {
+  background-color: #c25e24;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------FORMULARIOS---------------------------------------------*/
+.form-section {
+    padding: 50px 20px;
+    background-color: var(--celeste);
+    position: relative;
+}
+
+.formularios {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1% auto;
+}
+
+.form {
+    background: white;
+    padding: 10%;
+    border-radius: 8px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form h2 {
+  margin-bottom: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#registro-link {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+#registro-link:hover {
+  text-decoration: underline;
+  color: var(--naranja);
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(216, 121, 66);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.form button:hover {
+  background-color: var(--verde-claro);
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-container {
+  font-size: small;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------FOOTER NAV-------------------------------------------------------------------------------------- */
+
+.footer-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: inherit;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav ul li {
+    text-align: center;
+}
+
+.footer-banner {
+    width: 100%;
+    display: inline-block;
+}
+
+.menu-inferior {
+  color: #ffffff;
+  font-size: small;
+  text-decoration: none;
+  padding: 0px 15px;
+  display: block;
+  font-weight: 500;
+}
+
+.menu-inferior:hover {
+    color: var(--naranja);
+    font-weight: 525;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */

@@ -1,0 +1,224 @@
+:root {
+    --verde-claro: #037971ff;
+    --verde-oscuro: #023436ff;
+    --crema: rgb(205, 205, 205);
+    /* los violeta se ven un poco opacos, quizá sea mejor cambiarlos */
+    --violeta-claro: #665687ff;
+    --violeta-oscuro: #5d4e6dff;
+    --naranja: #f79256ff;
+    --celeste: #bbd5edff;
+    --yellow-green: #9acd32ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c0b7b1ff;
+}
+
+/* --------------------------------------------------------------HEADER---------------------------------------------------------------------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--verde-claro);
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Estilos para la imagen */
+.logo {
+    width: 7%;
+    height: auto;
+}
+
+/* Estilos para los iconos */
+.iconos {
+    display: flex;
+    gap: 15px;
+}
+
+
+.icono img {
+    width: 30px;
+    height: auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------MENU DE NAVEGACION ENTRE PAGINAS----------------------------------------------------------- */
+nav {
+    background-color: var(--verde-oscuro);
+}
+
+.nav-ul-superior {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.opcion {
+    margin: 0 15px;
+}
+
+.menu-superior {
+    color: #ffffff;
+    font-size: 80%;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.menu-superior:hover {
+    /* color: var(--naranja); */
+    background-color: var(--naranja);
+    color: black;
+    font-weight: 525;
+}
+
+#login {
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+#login .menu-superior:hover {
+    background-color: var(--crema);
+    color: black;
+    font-weight: 525;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------BANNER-------------------------------------------------------------------------------------- */
+.banner {
+    background: url('furniture.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 3%;
+    background-color: var(--celeste);
+}
+
+.banner h2 {
+    font-size: xx-large;
+}
+
+#slogan {
+    font-style: italic;
+    font-weight: 600;
+    font-size: medium;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.menucatalogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espacio entre las imágenes */
+  padding: 20px;
+}
+
+.image-link {
+  text-align: center;
+}
+
+.image-link img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 10px; /* Bordes redondeados, opcional */
+}
+
+.image-link p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.image-link a {
+  text-decoration: none;
+  color: #333; /* Color del texto, ajusta según necesites */
+}
+
+.image-link a:hover {
+  opacity: 0.8; /* Efecto al pasar el mouse, opcional */
+}
+
+
+
+/* ---------------------------------------------------FOOTER-------------------------------------------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-container {
+    font-size: small;
+    font-style: italic;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------FOOTER NAV-------------------------------------------------------------------------------------- */
+
+.footer-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* float: left; */
+    height: inherit;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav ul li {
+    /* margin-bottom: 10px; */
+    text-align: center;
+}
+
+.footer-banner {
+    /* background-color: var(--vermilion); */
+    width: 100%;
+    display: inline-block;
+}
+
+
+.menu-inferior {
+    color: #ffffff;
+    font-size: small;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.menu-inferior:hover {
+    /* color: var(--naranja); */
+    /* background-color: var(--naranja); */
+    color: var(--naranja);
+    font-weight: 525;
+}
+
+#logout:hover {
+    color: var(--verde-claro);
+    font-weight: 540;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
