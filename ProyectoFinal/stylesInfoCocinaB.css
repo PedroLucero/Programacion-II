@@ -100,7 +100,6 @@ nav ul li a {
 .product-section {
     display: flex;
     margin: 20px 0;
-    background-color: red;
 }
 
 .product-image {
@@ -127,7 +126,6 @@ nav ul li a {
     flex-basis: calc(25% - 20px);
     margin-bottom: 20px;
     text-align: center;
-    background-color: green;
 }
 
 .product-card img {
